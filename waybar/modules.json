@@ -1,0 +1,98 @@
+{
+  "custom/arch": {
+    "format": "󰣇",
+    "tooltip": true,
+    "tooltip-format": "Menu",
+    "on-click": "rofi -show drun"
+  },
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "warp-on-scroll": false,
+    "format": "{name}",
+    "format-icons": {
+      "urgent": "",
+      "active": "",
+      "default": ""
+    }
+  },
+  "pulseaudio": {
+    "format": "{icon}   {volume}%",
+    "format-bluetooth": "{icon} {volume}%  {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": "",
+    "format-source": " {volume}%",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+  },
+
+  "network": {
+    "format-wifi": "󰤨 ", // Corrected Wi-Fi icon
+    "format-ethernet": "󰈀 {ipaddr}/{cidr}", // Corrected Ethernet icon
+    "tooltip-format": "{ifname} via {gwaddr} 󰈀", // Corrected Ethernet tooltip icon
+    "format-linked": "{ifname} (No IP) 󰌘", // Corrected No IP icon
+    "format-disconnected": "󰤭 ", // Corrected Disconnected icon
+    "on-click": "kitty nmtui"
+  },
+  "bluetooth": {
+    "format": "{icon}", // Only the icon
+    "format-icons": {
+      "enabled": "󰂰 ", // Bigger Bluetooth ON
+      "disabled": "󰂲", // Bigger Bluetooth OFF
+      "connected": "󰂱 " // Bigger Bluetooth Connected
+    },
+    "tooltip": false,
+    "exec": "bluetoothctl show | grep -q 'Powered: yes' && echo 'enabled' || echo 'disabled'",
+    "interval": 2,
+    "on-click": "blueman-manager"
+  },
+  "cpu": {
+    "format": "  {usage}%",
+    "tooltip": true
+  },
+  "memory": {
+    "format": "  {}%",
+    "tooltip": true
+  },
+  "temperature": {
+    "interval": 10,
+    "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input",
+    "critical-threshold": 100,
+    "format-critical": " {temperatureC}",
+    "format": " {temperatureC}°C"
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}  {capacity}%",
+    "format-full": "{icon}  {capacity}%",
+    "format-charging": "  {capacity}%",
+    "format-plugged": "  {capacity}%",
+    "format-alt": "{time}  {icon}",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "battery#bat2": {
+    "bat": "BAT2"
+  },
+  "clock": {
+    "format": "{:%H:%M | %e %B}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%H:%M | %e %B}"
+  },
+  "custom/wlogout": {
+    "format": "⏻",
+    "tooltip": false,
+    "on-click": "wlogout -b 6"
+  }
+}
