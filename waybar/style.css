@@ -4,31 +4,27 @@
     /* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
     font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 14px;
-    transition: background-color .3s ease-out;
 }
 
 window#waybar {
     background: rgba(26, 27, 38, 0.0);
-    color: #c0caf5;
+    color: @color2;
     font-family: 
         SpaceMono Nerd Font,
         feather;
-    transition: background-color .5s;
 }
 
-.modules-left,
-.modules-center,
-.modules-right
-{
-    background: rgba(0, 0, 8, .7);
-    margin: 5px 5px 0px 5px;
-    border-radius: 15px;
+.modules-left{
+  border: @color2 solid 2px;
+    background: @background;
+    opacity : 0.7;
+    margin: 5px;
+    border-radius: 8px
 }
-.modules-left {
-    padding: 0;
-}
-.modules-center {
-    padding: 0 0;
+
+.modules-middle,
+.modules-right{
+    margin: 5px
 }
 
 #clock,
@@ -48,10 +44,17 @@ window#waybar {
 #scratchpad,
 #power-profiles-daemon,
 #language,
-#bluetooth
+#bluetooth,
 #mpd {
-    padding: 0 7px;
+    padding:0 7px;
     border-radius: 15px;
+    border: @color2 solid 2px;
+    background: @background;
+    opacity : 0.7;
+    margin: 5px 5px 0px 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    min-width: 15px; 
 }
 
 #clock:hover,
@@ -72,26 +75,32 @@ window#waybar {
 #power-profiles-daemon:hover,
 #language:hover,
 #bluetooth:hover,
+#bluetooth:hover,
+#custom-wlogout:hover,
 #mpd:hover {
     background: rgba(26, 27, 38, 0.9);
 }
 
 
 #workspaces button {
-  background: transparent;   
+background: rgba(0, 0, 8, .7);
   font-family:
     SpaceMono Nerd Font,
     feather;
   font-weight: 900;
+    margin: 5px 2px;
   font-size: 13pt;
   color: #c0caf5;
   border:none;
-  border-radius: 15px;
+  border-radius: 7px;
+border: @color2 solid 2px;
+
 }
 
+
 #workspaces button.active {
-    background: #c0caf5;
-    color: rgba(0, 0, 8, .7);
+    background: @color2;
+    color: @background;
     transition: all 0.4s ease-out 0.4s;
 }
 
@@ -113,13 +122,14 @@ window#waybar {
     color: #1793d1;
 }
 #custom-wlogout {
-    font-size: 18px; /* Adjust size as needed */
+    font-size: 25px; /* Adjust size as needed */
     margin-left: 5px;
     margin-right: 5px;
-    padding: 5px 10px;
+    padding: 0px 10px;
 }
 
-#network,
-#bluetooth {
-    font-size: 16px;
+#taskbar{
+    font-size: 14px;
+   border-radius: 8px; 
 }
+

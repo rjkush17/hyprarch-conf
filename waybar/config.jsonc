@@ -7,7 +7,7 @@
     "spacing": 1, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "custom/arch",
+        "custom/wlogout",   
         "wlr/taskbar",
         "tray"
     ],
@@ -24,7 +24,6 @@
         "battery",
         "battery#bat2",
         "clock",
-        "custom/wlogout",
     ],
     //Modules configuration
 

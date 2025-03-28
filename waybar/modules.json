@@ -36,17 +36,17 @@
   },
 
   "network": {
-    "format-wifi": "󰤨 ", // Corrected Wi-Fi icon
+    "format-wifi": " ", // Corrected Wi-Fi icon
     "format-ethernet": "󰈀 {ipaddr}/{cidr}", // Corrected Ethernet icon
     "tooltip-format": "{ifname} via {gwaddr} 󰈀", // Corrected Ethernet tooltip icon
     "format-linked": "{ifname} (No IP) 󰌘", // Corrected No IP icon
-    "format-disconnected": "󰤭 ", // Corrected Disconnected icon
-    "on-click": "kitty nmtui"
+    "format-disconnected": "睊", // Corrected Disconnected icon
+    "on-click": "kitty --class floating_kitty sh -c 'cat ~/.cache/wal/sequences; nmtui'"
   },
   "bluetooth": {
     "format": "{icon}", // Only the icon
     "format-icons": {
-      "enabled": "󰂰 ", // Bigger Bluetooth ON
+      "enabled": " 󰂰 ", // Bigger Bluetooth ON
       "disabled": "󰂲", // Bigger Bluetooth OFF
       "connected": "󰂱 " // Bigger Bluetooth Connected
     },
@@ -94,5 +94,10 @@
     "format": "⏻",
     "tooltip": false,
     "on-click": "wlogout -b 6"
-  }
+  },
+"taskbar": {
+    "on-click": "activate",
+    "tooltip": false,
+    "format": "{icon} {title}"
+}  
 }

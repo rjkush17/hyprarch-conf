@@ -8,3 +8,5 @@ WALLPAPER=$(find ~/Wallpapers/hyprland/ -type f | shuf -n 1)
 
 swww img "$WALLPAPER" --transition-type wipe
 wal -i "$WALLPAPER"
+
+pkill waybar && waybar &
