@@ -47,8 +47,8 @@
     "format": "{icon}", // Only the icon
     "format-icons": {
       "enabled": " 󰂰 ", // Bigger Bluetooth ON
-      "disabled": "󰂲", // Bigger Bluetooth OFF
-      "connected": "󰂱 " // Bigger Bluetooth Connected
+      "disabled": " 󰂲 ", // Bigger Bluetooth OFF
+      "connected": " 󰂱 " // Bigger Bluetooth Connected
     },
     "tooltip": false,
     "exec": "bluetoothctl show | grep -q 'Powered: yes' && echo 'enabled' || echo 'disabled'",
@@ -99,5 +99,14 @@
     "on-click": "activate",
     "tooltip": false,
     "format": "{icon} {title}"
-}  
+},
+"tray": {
+    "icon-size": 21,
+    "spacing": 8
+},
+  "wlr/taskbar": {
+      "icon-size": 20
+  }
+  
+
 }

@@ -1,37 +1,30 @@
-
 @import url('../../.cache/wal/colors-waybar.css');
 
 * {
     /* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
     font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    padding: 0;
-    margin: 0;
-    font-weight: bolder;
+    font-size: 14px;
 }
 
 window#waybar {
-    background: rgba(26, 27, 38, 0);
+    background: rgba(26, 27, 38, 0.0);
     color: @color2;
-    padding: 0;
-    margin: 0;
-    font-family:
-    
+    font-family: 
         SpaceMono Nerd Font,
         feather;
 }
 
 .modules-left{
-    margin-left: 0px;
-    padding: 5px
+  border: @color2 solid 2px;
+    background: @background;
+    opacity : 0.7;
+    margin: 5px;
+    border-radius: 8px
 }
-.modules-middle{
-    margin-left: 0;
-    margin-right:0;
-}
+
+.modules-middle,
 .modules-right{
-    margin-right:0px;
-    padding: 5px;
+    margin: 5px
 }
 
 #clock,
@@ -52,23 +45,16 @@ window#waybar {
 #power-profiles-daemon,
 #language,
 #bluetooth,
-#custom-arch,
-#custom-wlogout,
-#taskbar button,
 #mpd {
     padding:0 7px;
+    border-radius: 15px;
+    border: @color2 solid 2px;
+    background: @background;
+    opacity : 0.7;
+    margin: 5px 5px 0px 5px;
     border-radius: 5px;
-    border: @color2 solid 0px;
-    background: @color2;
-    color: @background;
-    /* opacity : 0.7; */
-    margin: 5px 2px 0px 2px;
     font-weight: bold;
     min-width: 15px; 
-}
-
-#clock{
-    font-size: 14px;
 }
 
 #clock:hover,
@@ -89,67 +75,32 @@ window#waybar {
 #power-profiles-daemon:hover,
 #language:hover,
 #bluetooth:hover,
-#custom-arch:hover,
+#bluetooth:hover,
 #custom-wlogout:hover,
-#taskbar button,
 #mpd:hover {
-     background: @color2;
-    color:@background
+    background: rgba(26, 27, 38, 0.9);
 }
 
-#workspaces{
+
+#workspaces button {
 background: rgba(0, 0, 8, .7);
   font-family:
     SpaceMono Nerd Font,
     feather;
   font-weight: 900;
-  margin: 5px 2px;
-  padding: 0px 0px;
-  font-size: 16px;
+    margin: 5px 2px;
+  font-size: 13pt;
   color: #c0caf5;
   border:none;
-  border-radius: 5px;
-border: @color2 solid 0px;
+  border-radius: 7px;
+border: @color2 solid 2px;
+
 }
 
-#taskbar{
-background: rgba(0, 0, 8, .7);
-  font-family:
-    SpaceMono Nerd Font,
-    feather;
-  font-weight: 900;
-  margin: 5px 2px;
-  padding: 0px 0px;
-  font-size: 16px;
-  color: #c0caf5;
-  border:none;
-  border-radius: 5px;
-border: @color2 solid 0px;
-}
-
-#taskbar button{
-background: rgba(0, 0, 8, 0);
-  font-family:
-    SpaceMono Nerd Font,
-    feather;
-  font-weight: 900;
-  margin: 5px 2px;
-  padding: 0px 7px;
-  font-size: 16px;
-  color: #c0caf5;
-  border:none;
-}
-
-#workspaces button{
-    padding:  0px 5px;
-    border-radius: 5px;
-}
 
 #workspaces button.active {
     background: @color2;
     color: @background;
-    border-radius: 5px;
-    border-radius: 5px;
     transition: all 0.4s ease-out 0.4s;
 }
 
@@ -160,22 +111,25 @@ background: rgba(0, 0, 8, 0);
 }
 
 #custom-arch {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0 10px;
     font-size: 25px;
     transition: color .5s;
-    color: #1793d1; 
+    color: #1793d1;
 }
 #custom-arch:hover {
-    background: #1793d1;
-    color:@background
-}
-
-#bluetooth{
-    font-size: 20px;
-    padding: 2px 0px;
+    color: #1793d1;
 }
 #custom-wlogout {
     font-size: 25px; /* Adjust size as needed */
+    margin-left: 5px;
+    margin-right: 5px;
     padding: 0px 10px;
 }
 
+#taskbar{
+    font-size: 14px;
+   border-radius: 8px; 
+}
 
