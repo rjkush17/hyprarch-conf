@@ -15,8 +15,7 @@ window#waybar {
     color: @color2;
     padding: 0;
     margin: 0;
-    font-family:
-    
+    font-family: 
         SpaceMono Nerd Font,
         feather;
 }
@@ -93,8 +92,8 @@ window#waybar {
 #custom-wlogout:hover,
 #taskbar button,
 #mpd:hover {
-     background: @color2;
-    color:@background
+     color: @color2;
+    background:@background
 }
 
 #workspaces{
@@ -133,8 +132,8 @@ background: rgba(0, 0, 8, 0);
     SpaceMono Nerd Font,
     feather;
   font-weight: 900;
-  margin: 5px 2px;
-  padding: 0px 7px;
+  margin: 5px 0px;
+  padding: 0px 3px;
   font-size: 16px;
   color: #c0caf5;
   border:none;
@@ -161,12 +160,12 @@ background: rgba(0, 0, 8, 0);
 
 #custom-arch {
     font-size: 25px;
-    transition: color .5s;
-    color: #1793d1; 
+    padding: 0px 13px 0px 10px;
+    transition: color .5s; 
 }
 #custom-arch:hover {
-    background: #1793d1;
-    color:@background
+    background: black;
+    color:#1793D1;
 }
 
 #bluetooth{

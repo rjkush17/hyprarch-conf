@@ -8,6 +8,7 @@
     // Choose the order of the modules
     "modules-left": [
         "clock",
+        "battery",
         "cpu",
         "memory",
         "temperature",
@@ -21,9 +22,9 @@
         "pulseaudio",
         "network",
         "bluetooth",
-        "battery",
         "battery#bat2",
         "custom/wlogout",
+        "custom/arch"
     ],
     //Modules configuration
 
