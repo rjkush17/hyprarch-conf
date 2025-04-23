@@ -22,7 +22,7 @@ window#waybar {
 
 .modules-left{
     margin-left: 0px;
-    padding: 5px
+    padding: 6px
 }
 .modules-middle{
     margin-left: 0;
@@ -30,7 +30,7 @@ window#waybar {
 }
 .modules-right{
     margin-right:0px;
-    padding: 5px;
+    padding: 6px;
 }
 
 #clock,
@@ -60,8 +60,7 @@ window#waybar {
     border: @color2 solid 0px;
     background: @color2;
     color: @background;
-    /* opacity : 0.7; */
-    margin: 5px 2px 0px 2px;
+    margin: 0px 2px 0px 2px;
     font-weight: bold;
     min-width: 15px; 
 }
@@ -159,7 +158,7 @@ background: rgba(0, 0, 8, 0);
 }
 
 #custom-arch {
-    font-size: 25px;
+    font-size: 20px;
     padding: 0px 13px 0px 10px;
     transition: color .5s; 
 }
@@ -176,5 +175,7 @@ background: rgba(0, 0, 8, 0);
     font-size: 25px; /* Adjust size as needed */
     padding: 0px 10px;
 }
-
-
+#tray{
+    color: @color2;
+    background: @background
+}
