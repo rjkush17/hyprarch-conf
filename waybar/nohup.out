@@ -89,3 +89,27 @@
 ** (waybar:28208): WARNING **: 13:29:12.114: Status Notifier Item with bus name ':1.104' and object path '/org/ayatana/NotificationItem/xpad' is already registered
 [2025-04-05 13:30:32.077] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
 [2025-04-05 13:30:32.083] [info] Loading persistent workspaces from Hyprland workspace rules
+[2025-04-30 09:26:35.681] [info] Using configuration file /home/zatch/.config/waybar/config.jsonc
+[2025-04-30 09:26:35.687] [info] Including resource file: ~/.config/waybar/modules.json
+[2025-04-30 09:26:35.692] [info] Discovered appearance 'dark'
+[2025-04-30 09:26:35.692] [info] Using CSS file /home/zatch/.config/waybar/style.css
+[2025-04-30 09:26:35.702] [info] Hyprland IPC starting
+[2025-04-30 09:26:35.703] [info] Loading persistent workspaces from Hyprland workspace rules
+[2025-04-30 09:26:35.706] [warning] No battery named BAT2
+[2025-04-30 09:26:36.150] [info] Bar configured (width: 1920, height: 45) for output: eDP-1
+[2025-04-30 09:26:42.707] [info] Quitting.
+[2025-04-30 09:26:42.717] [info] Hyprland IPC stopping...
+[2025-04-30 09:26:44.850] [info] Using configuration file /home/zatch/.config/waybar/config.jsonc
+[2025-04-30 09:26:44.851] [info] Including resource file: ~/.config/waybar/modules.json
+[2025-04-30 09:26:44.855] [info] Discovered appearance 'dark'
+[2025-04-30 09:26:44.855] [info] Using CSS file /home/zatch/.config/waybar/style.css
+[2025-04-30 09:26:44.864] [info] Hyprland IPC starting
+[2025-04-30 09:26:44.865] [info] Loading persistent workspaces from Hyprland workspace rules
+[2025-04-30 09:26:44.868] [warning] No battery named BAT2
+[2025-04-30 09:26:45.312] [info] Bar configured (width: 1920, height: 45) for output: eDP-1
+[2025-04-30 09:27:26.559] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2025-04-30 09:28:56.932] [info] Using configuration file /home/zatch/.config/waybar/config.jsonc
+[2025-04-30 09:28:56.932] [info] Including resource file: ~/.config/waybar/modules.json
+[2025-04-30 09:28:56.936] [info] Discovered appearance 'dark'
+[2025-04-30 09:28:56.936] [info] Using CSS file /home/zatch/.config/waybar/style.css
+[2025-04-30 09:28:56.938] [error] style.css:26:18'padding-buttom' is not a valid property name

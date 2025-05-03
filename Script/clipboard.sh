@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Use awk to remove the first column (number and hash) from the cliphist list output
-selected=$(cliphist list | awk '{$1=""; print substr($0,2)}' | rofi ~/.config/rofi/clipboard.rasi -dmenu -p "Clipboard")
+selected=$(cliphist list | awk '{$1=""; print substr($0,2)}' | rofi -theme ~/.config/rofi/clipboard.rasi -dmenu -p "Clipboard")
 
 if [ -n "$selected" ]; then
   cliphist decode <<< "$selected" | wl-copy

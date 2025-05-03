@@ -4,17 +4,18 @@
 * {
     /* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
     font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     padding: 0;
     margin: 0;
     font-weight: bolder;
+    min-height: 10px;
 }
 
 window#waybar {
     background: rgba(26, 27, 38, 0);
     color: @color2;
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
     font-family: 
         SpaceMono Nerd Font,
         feather;
@@ -22,17 +23,17 @@ window#waybar {
 
 .modules-left{
     margin-left: 0px;
-    padding: 6px
+    padding: 6px;
 }
 .modules-middle{
     margin-left: 0;
     margin-right:0;
+    padding: 6px;
 }
 .modules-right{
     margin-right:0px;
     padding: 6px;
 }
-
 #clock,
 #battery,
 #cpu,
@@ -66,7 +67,7 @@ window#waybar {
 }
 
 #clock{
-    font-size: 14px;
+    font-size: 13px;
 }
 
 #clock:hover,
@@ -172,7 +173,7 @@ background: rgba(0, 0, 8, 0);
     padding: 2px 0px;
 }
 #custom-wlogout {
-    font-size: 25px; /* Adjust size as needed */
+    font-size: 25px;
     padding: 0px 10px;
 }
 #tray{
