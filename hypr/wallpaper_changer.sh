@@ -6,6 +6,7 @@ fi
 
 WALLPAPER=$(find ~/Wallpapers/hyprland/ -type f | shuf -n 1)
 swww img "$WALLPAPER" --transition-type wipe
-wal -i "$WALLPAPER"
+sleep 1 
+wal -i "$WALLPAPER" && ~/.config/wal/set_dunst_colors.sh
 
 pkill waybar && waybar &
