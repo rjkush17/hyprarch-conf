@@ -10,9 +10,9 @@ sleep 0.3
 WALLPAPER=$(find "$HOME/Wallpapers/hyprland/" -type f | shuf -n 1)
 
 # Set wallpaper with transition
-swww img "$WALLPAPER" --transition-type wipe --transition-duration 1.8
+swww img "$WALLPAPER" --transition-type wipe --transition-duration 2
 
-sleep 0.5
+sleep 0.2
 
 # Generate Pywal colors (no extra output, background process)
 wal -i "$WALLPAPER" --backend wal &> /dev/null
@@ -24,8 +24,8 @@ sleep 0.5
 ~/.config/Script/update_dunst_colors.sh
 
 # Restart Waybar
-pkill waybar && waybar
+pkill waybar && waybar 
+
 
 # Send notification
 notify-send -i "$HOME/.config/Script/icons/color.png" "🎨 Theme Updated" "Wallpaper & system colors applied"
-
