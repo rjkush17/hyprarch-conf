@@ -10,7 +10,7 @@ sleep 0.3
 WALLPAPER=$(find "$HOME/Wallpapers/hyprland/" -type f | shuf -n 1)
 
 # Set wallpaper with transition
-swww img "$WALLPAPER" --transition-type wipe --transition-duration 2
+swww img "$WALLPAPER" --transition-type random --transition-duration 2
 
 sleep 0.2
 

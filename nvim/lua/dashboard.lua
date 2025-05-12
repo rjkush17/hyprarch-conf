@@ -1,7 +1,7 @@
 local alpha = require("alpha")
 local dashboard = require("alpha.themes.dashboard")
 
--- Set header
+-- Header ASCII Art
 dashboard.section.header.val = {
   "                                                     ",
   "  ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ",
@@ -13,28 +13,25 @@ dashboard.section.header.val = {
   "                                                     ",
 }
 
--- Set menu
+-- Buttons / Menu with Nerd Font icons
 dashboard.section.buttons.val = {
-  dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
-  dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
-  dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"),
-  dashboard.button("c", "  Configuration", ":e ~/.config/nvim/init.lua <CR>"),
-  dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
+  dashboard.button("e", "  New File", ":ene <BAR> startinsert <CR>"),
+  dashboard.button("f", "󰱼  Find File", ":Telescope find_files <CR>"),
+  dashboard.button("r", "󰄉  Recent Files", ":Telescope oldfiles <CR>"),
+  dashboard.button("c", "  Configuration", ":e ~/.config/nvim/init.lua <CR>"),
+  dashboard.button("q", "󰗼  Quit Neovim", ":qa<CR>"),
 }
 
-
+-- Footer Message
 dashboard.section.footer.val = {
-        "                                               ",
-        "       🚀 Welcome back, Rishabh✨! 🚀           ",
-        "  💡 Stay productive and keep coding! 💻       ",
-        "  📅 Today is " .. os.date("%A, %B %d, %Y") .. " ",
-        "                                               ",
-      }
--- Set footer
--- dashboard.section.footer.val = "Welcome Back Rishabh"
+  "---------------------------------------------",
+  "   Welcome back, Rishabh! ",
+  "   Stay productive and keep coding! ",
+  "   Today is " .. os.date("%A, %B %d, %Y"),
+  "---------------------------------------------",
+}
 
--- Set layout
-
+-- Layout arrangement
 dashboard.config.layout = {
   { type = "padding", val = 2 },
   dashboard.section.header,
@@ -44,5 +41,5 @@ dashboard.config.layout = {
   dashboard.section.footer,
 }
 
--- Initialize Alpha
+-- Setup Alpha Dashboard
 alpha.setup(dashboard.config)

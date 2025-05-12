@@ -41,19 +41,19 @@ verbosity = mesg
 corner_radius = 10
 
 [urgency_low]
-background = "#16153c"
-foreground = "#5C8FBC"
-frame_color = "#3687BF"
+background = "#101716"
+foreground = "#ABC058"
+frame_color = "#6D8676"
 timeout = 5
 
 [urgency_normal]
-background = "#16153c"
-foreground = "#5C8FBC"
-frame_color = "#3687BF"
+background = "#101716"
+foreground = "#ABC058"
+frame_color = "#6D8676"
 timeout = 5
 
 [urgency_critical]
-background = "#16153c"
-foreground = "#5C8FBC"
-frame_color = "#3687BF"
+background = "#101716"
+foreground = "#ABC058"
+frame_color = "#6D8676"
 timeout = 10

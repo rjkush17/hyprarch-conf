@@ -11,3 +11,5 @@ vim.o.number = true  -- Enable absolute line numbers
 vim.o.relativenumber = true  -- Enable relative line numbers
 vim.o.cursorline = true  -- Highlight the current line
 vim.cmd [[highlight CursorLineNr guifg=#61afef gui=bold]]
+
+
