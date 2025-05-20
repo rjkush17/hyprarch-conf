@@ -19,6 +19,7 @@
     ],
     "modules-right": [
         "tray",
+        "custom/clip",
         "pulseaudio",
         "network",
         "bluetooth",

@@ -1,7 +1,7 @@
 @import "~/.cache/wal/colors-rofi-dark.rasi"
 
 * {
-    font: "Poppins 12";
+    font: "Poppins 9";
     g-spacing: 5px;
     g-margin: 0;
     b-color: #000000FF;
@@ -19,11 +19,12 @@
     icon-size: 24px;
     border: 0px;
     text-color: #FFFFFF;
+    text-wrap: true;
     background-color: transparent;    
 }
 
 configuration {
-    modi: "drun";
+    modi: "clipboard";
     show-icons: false;
     display-drun: "";
     no-custom: true;
@@ -35,7 +36,7 @@ listview {
     fixed-height: true;
     fixed-columns: true;
     cycle: false;
-    scrollbar: true;
+    scrollbar: false;
     border: 0px solid;
     margin: 5px;
     text-color: @background; 
@@ -50,7 +51,7 @@ listview {
 }
 #window {
     transparency: "real";
-    width: 460px;
+    width: 360px;
     border-radius: @b-radius;
     background-color: @wbg-color;
     border: 2px;

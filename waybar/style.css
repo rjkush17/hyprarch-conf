@@ -54,6 +54,7 @@ window#waybar {
 #bluetooth,
 #custom-arch,
 #custom-wlogout,
+#custom-clip,
 #taskbar button,
 #mpd {
     padding:0 7px;
@@ -90,6 +91,7 @@ window#waybar {
 #bluetooth:hover,
 #custom-arch:hover,
 #custom-wlogout:hover,
+#custom-clip:hover,
 #taskbar button,
 #mpd:hover {
      color: @color2;
@@ -179,4 +181,8 @@ background: rgba(0, 0, 8, 0);
 #tray{
     color: @color2;
     background: @background
+}
+#custom-arch,
+#custom-clip{
+    font-size: 18px
 }

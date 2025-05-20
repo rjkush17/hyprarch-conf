@@ -5,7 +5,12 @@
     "tooltip-format": "Menu",
     "on-click": "rofi -show drun"
   },
-
+"custom/clip": {
+    "format": "",
+    "tooltip": true,
+    "tooltip-format": "Menu",
+    "on-click": "~/.config/Script/clipboard.sh"
+  },
   "hyprland/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
