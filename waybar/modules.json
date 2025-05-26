@@ -102,7 +102,7 @@
   "clock": {
     "format": "{:%H:%M┃%A,%e %B %Y}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%H:%M | %e %B}"
+    "on-click": "gnome-calendar"
   },
   "custom/wlogout": {
     "format": "⏻",
