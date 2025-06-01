@@ -1,42 +1,19 @@
 return {
-	{
-		"lukas-reineke/indent-blankline.nvim",
-		dependencies = {
-			"nmac427/guess-indent.nvim",
-		},
-		main = "ibl",
-		event = "VeryLazy",
-		config = function()
-			require("ibl").setup({
-				scope = {
-					show_start = false,
-				},
-				indent = {
-					char = "│",
-					tab_char = "│",
-					smart_indent_cap = true,
-				},
-				whitespace = {
-					remove_blankline_trail = true,
-				}
-			})
-			require("guess-indent").setup({})
-		end,
-	},
-	{
-		"preservim/tagbar",
-		config = function()
-			vim.api.nvim_set_keymap("n", "<F8>", ":TagbarToggle<CR>", { noremap = true, silent = true })
-		end,
-	}
+  "shellRaining/hlchunk.nvim",
+  event = { "BufReadPre", "BufNewFile" },
+  config = function()
+    require("hlchunk").setup({
+      chunk = {
+        enable = true,
+        hl_group = "MyChunkHighlight",
+      },
+      indent = {
+        enable = true,
+      },
+    })
+
+    -- Define the custom highlight group using Onedarkpro colors
+    vim.api.nvim_set_hl(0, "MyChunkHighlight", { fg = "#61AFEF", bg = "#1E1E2E", bold = true })
+  end,
 }
 
--- return {
---  "lukas-reineke/indent-blankline.nvim",
---  config = function()
---    require("ibl").setup({
---      indent = { char = "" }, -- Change to "┆" or "┊" if you prefer
---      scope = { enabled = true },
---    })
---  end,
--- }
