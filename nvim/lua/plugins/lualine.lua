@@ -4,7 +4,7 @@ return {
     config = function()
         require('lualine').setup({
             options = {
-                theme = 'auto',
+                theme = "auto",
                 globalstatus = true, -- Ek hi statusline across tabs
                 icons_enabled = true,
                 component_separators = { left = '', right = '' },
@@ -33,7 +33,7 @@ return {
                             for _, client in ipairs(clients) do
                                 local filetypes = client.config.filetypes
                                 if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-                                    return '  LSP: ' .. client.name
+                                    return 'LSP: ' .. client.name
                                 end
                             end
                             return msg

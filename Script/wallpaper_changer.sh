@@ -4,7 +4,7 @@
 pgrep -x swww-daemon > /dev/null || swww-daemon &
 
 # Wait briefly to ensure daemon is ready
-sleep 1.3
+sleep 0.5
 
 # Pick a random wallpaper
 WALLPAPER=$(find "$HOME/Wallpapers/hyprland/" -type f | shuf -n 1)
@@ -13,10 +13,10 @@ WALLPAPER=$(find "$HOME/Wallpapers/hyprland/" -type f | shuf -n 1)
 swww img "$WALLPAPER" --transition-type random --transition-duration 3
 
 # Wait a bit before color generation
-sleep 1.2
+sleep 0.5
 
 # Generate Pywal colors (silent)
-wal -i "$WALLPAPER" --backend wal &> /dev/null
+wal -i "$WALLPAPER"
 
 # Wait for wal to finish writing
 sleep 1.5
@@ -24,9 +24,13 @@ sleep 1.5
 # Update Dunst colors
 ~/.config/Script/update_dunst_colors.sh
 
+# Reload dunst after theme update
+pkill dunst && dunst &
+
 # Restart Waybar
 pkill waybar && waybar &
 
 # Notify user
+sleep 1
 notify-send -i "$HOME/.config/Script/icons/color.png" "🎨 Theme Updated" "Wallpaper & system colors applied"
 

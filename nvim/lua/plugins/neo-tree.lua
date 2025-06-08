@@ -16,6 +16,10 @@ require("nvim-tree").setup({
   filters = {
     dotfiles = true,
   },
+     git = {
+    enable = true,      -- enable git integration
+    ignore = false,     -- show ignored files, set to false to see untracked files
+  },
 })
       
 

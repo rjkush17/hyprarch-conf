@@ -12,7 +12,7 @@
 }
 
 window#waybar {
-    background: rgba(26, 27, 38, 0);
+    background: rgba(26, 27, 38, 0.0);
     color: @color2;
     padding: 0px;
     margin: 0px;
@@ -60,7 +60,7 @@ window#waybar {
     padding:0 7px;
     border-radius: 5px;
     border: @color2 solid 0px;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.6);
     color: @color2;
     margin: 0px 2px 0px 2px;
     font-weight: bold;
