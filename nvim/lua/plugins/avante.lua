@@ -2,17 +2,13 @@
 return {
  "yetone/avante.nvim",
  event = "VeryLazy",
- version = false,        -- never set to "*"
+ version = "v0.0.24", -- never set to "*"
  opts = {
   provider = "openai",   -- select provider
   providers = {
    openai = {
     endpoint = "https://api.openai.com/v1",
-    model = "gpt-4o-mini",     -- use GPT‑4o‑mini model
-    extra_request_body = {
-     temperature = 0.75,
-     max_completion_tokens = 1192,      -- adjust as needed
-    },
+    model = "gpt-4o-mini", 
    },
   },
  },
