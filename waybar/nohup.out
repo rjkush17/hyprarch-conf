@@ -113,3 +113,16 @@
 [2025-04-30 09:28:56.936] [info] Discovered appearance 'dark'
 [2025-04-30 09:28:56.936] [info] Using CSS file /home/zatch/.config/waybar/style.css
 [2025-04-30 09:28:56.938] [error] style.css:26:18'padding-buttom' is not a valid property name
+
+(waybar:6022): Gtk-WARNING **: 11:13:38.933: Unknown key IconViewScale in /home/zatch/.config/gtk-3.0/settings.ini
+
+(waybar:6022): Gtk-WARNING **: 11:13:38.939: Unknown key ViewMode in /home/zatch/.config/gtk-3.0/settings.ini
+[2025-06-08 11:13:39.004] [info] Using configuration file /home/zatch/.config/waybar/config.jsonc
+[2025-06-08 11:13:39.004] [info] Including resource file: ~/.config/waybar/modules.json
+[2025-06-08 11:13:39.007] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2025-06-08 11:13:39.007] [info] Using CSS file /home/zatch/.config/waybar/style.css
+[2025-06-08 11:13:39.019] [info] Hyprland IPC starting
+[2025-06-08 11:13:39.020] [info] Loading persistent workspaces from Hyprland workspace rules
+[2025-06-08 11:13:39.024] [warning] No battery named BAT2
+[2025-06-08 11:13:39.451] [warning] Requested height: 5 is less than the minimum height: 47 required by the modules
+[2025-06-08 11:13:39.451] [info] Bar configured (width: 1920, height: 47) for output: eDP-1
