@@ -1,32 +1,40 @@
 return {
   {
-    "nvim-tree/nvim-tree.lua",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+    },
     config = function()
-require("nvim-tree").setup({
-  sort = {
-    sorter = "case_sensitive",
-  },
-  view = {
-    width = 30,
-  },
-  renderer = {
-    group_empty = true,
-  },
-  filters = {
-    dotfiles = true,
-  },
-     git = {
-    enable = true,      -- enable git integration
-    ignore = false,     -- show ignored files, set to false to see untracked files
-  },
-})
-      
+      require("neo-tree").setup({
+        window = {
+          width = 33,
+          components = {
+            indent = {
+              enable = false, 
+            },
+          },
+        },
+        filesystem = {
+          filtered_items = {
+            visible = true,
+            hide_dotfiles = false,
+            hide_gitignored = false,
+          },
+        },
+      })
 
-      -- Keybindings
-      vim.keymap.set("n", "<leader>b", "<cmd>NvimTreeFocus<CR>", { desc = "Focus nvim-tree" })
-      vim.keymap.set("n", "<C-b>", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle nvim-tree" })
-    end,
-  },
+      -- Keymaps
+      vim.keymap.set('n', '<C-b>', ':Neotree filesystem toggle left<CR>', { desc = "Toggle Neo-tree" })
+      vim.keymap.set("n", "<leader>b", function()
+        if vim.bo.filetype == "neo-tree" then
+          vim.cmd("wincmd p")
+        else
+          vim.cmd("Neotree focus")
+        end
+      end, { noremap = true, silent = true, desc = "Focus/switch Neo-tree" })
+    end
+  }
 }
-
