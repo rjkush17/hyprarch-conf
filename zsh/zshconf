@@ -53,8 +53,6 @@ alias conf='cd ~/.config && cd'
 alias ~='cd ~'
 # List all files with details and colors
 alias ll='ls -alF --color=auto'
-# Safer remove (requires trash-cli)
-alias rm='trash-put'
 # Clear terminal
 alias c='clear'
 # Disk usage summary (human-readable)

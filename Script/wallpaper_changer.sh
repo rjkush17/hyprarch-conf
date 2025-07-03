@@ -33,4 +33,3 @@ pkill waybar && waybar &
 # Notify user
 sleep 1
 notify-send -i "$HOME/.config/Script/icons/color.png" "🎨 Theme Updated" "Wallpaper & system colors applied"
-
