@@ -1,25 +1,42 @@
 #!/bin/bash
 
-# Start swww daemon if not already running
-pgrep -x swww-daemon > /dev/null || swww-daemon &
+# Check if swww-daemon is running, start if not
+if ! pgrep -x swww-daemon > /dev/null; then
+    swww-daemon &
+    swww clear
+    # Increased sleep to ensure daemon is fully ready
+    sleep 0.5
+fi
 
-# Wait briefly to ensure daemon is ready
-sleep 0.5
+# Pick a random wallpaper from directory
+WALLPAPER=$(find "$HOME/Wallpapers/hyprland/" -type f \( -iname "*.jpg" -o -iname "*.png" \) | shuf -n 1)
 
-# Pick a random wallpaper
-WALLPAPER=$(find "$HOME/Wallpapers/hyprland/" -type f | shuf -n 1)
+# Exit if no wallpaper found
+if [ -z "$WALLPAPER" ]; then
+    notify-send -i error "Wallpaper Error" "No valid wallpaper found!"
+    exit 1
+fi
 
-# Set wallpaper with transition
-swww img "$WALLPAPER" --transition-type random --transition-duration 3
+# Clear any existing swww transitions to prevent overlap
+ # swww clear
 
-# Wait a bit before color generation
-sleep 0.5
+# Define array of transition types, excluding 'none'
+TRANSITION_TYPES=("wipe" "center" "outer" "left" "right" "top" "bottom")
 
-# Generate Pywal colors (silent)
-wal -i "$WALLPAPER"
+# Select a random transition type
+RANDOM_TRANSITION=${TRANSITION_TYPES[$((RANDOM % ${#TRANSITION_TYPES[@]}))]}
+
+# Set wallpaper with random transition type and shorter duration
+swww img "$WALLPAPER" --transition-type "$RANDOM_TRANSITION" --transition-duration 2
+
+# Wait for transition to complete
+sleep 2.1
+
+# Generate Pywal colors silently
+wal -i "$WALLPAPER" -q
 
 # Wait for wal to finish writing
-sleep 1.5
+sleep 1
 
 # Update Dunst colors
 ~/.config/Script/update_dunst_colors.sh
@@ -30,6 +47,5 @@ pkill dunst && dunst &
 # Restart Waybar
 pkill waybar && waybar &
 
-# Notify user
 sleep 1
 notify-send -i "$HOME/.config/Script/icons/color.png" "🎨 Theme Updated" "Wallpaper & system colors applied"
