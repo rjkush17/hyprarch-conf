@@ -6,7 +6,7 @@
 }
 
 window {
-	background-color: rgba(0, 0, 8, 0.4);
+	background-color: rgba(0, 0, 8, 0);
 }
 
 button {
@@ -14,7 +14,7 @@ button {
 	margin: 6px;
 	text-decoration: none;
 	color: #c0caf5;
-	background-color: rgba(0, 0, 8, .8);
+	background-color: rgba(0, 0, 8, 1);
 	border-style: solid;
 	border-width: 0px;
 	background-repeat: no-repeat;
@@ -27,7 +27,7 @@ button {
 button:focus, button:active, button:hover {
 	outline-style: none;
 	background-color: @color2;
-	opacity: 0.8;
+	opacity: 1;
 	padding: 50px 
 }
 
