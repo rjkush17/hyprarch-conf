@@ -17,11 +17,6 @@ sed -i -E \
     -e "/^\[urgency_normal\]/,/^\[.*\]/ s/^background = .*/background = \"$bg\"/" \
     -e "/^\[urgency_normal\]/,/^\[.*\]/ s/^foreground = .*/foreground = \"$fg\"/" \
     -e "/^\[urgency_normal\]/,/^\[.*\]/ s/^frame_color = .*/frame_color = \"$accent\"/" \
-
-    # for enable color chnage the urgency notification uncomment the below lines
-    # -e "/^\[urgency_critical\]/,/^\[.*\]/ s/^background = .*/background = \"$bg\"/" \
-    # -e "/^\[urgency_critical\]/,/^\[.*\]/ s/^foreground = .*/foreground = \"$fg\"/" \
-    # -e "/^\[urgency_critical\]/,/^\[.*\]/ s/^frame_color = .*/frame_color = \"$accent\"/" \
     "$DUNST_CONFIG"
 
 # Restart Dunst
