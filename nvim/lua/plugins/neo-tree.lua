@@ -1,40 +1,28 @@
 return {
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons",
-      "MunifTanjim/nui.nvim",
-    },
-    config = function()
-      require("neo-tree").setup({
-        window = {
-          width = 33,
-          components = {
-            indent = {
-              enable = false, 
-            },
-          },
+  "nvim-tree/nvim-tree.lua",
+  dependencies = { "nvim-tree/nvim-web-devicons" },
+  config = function()
+    require("nvim-tree").setup({
+      view = { width = 33, side = "left", signcolumn = "no" },
+      git = { enable = true, ignore = false },
+      diagnostics = { enable = true, icons = { hint="", info="", warning="", error="" } },
+      renderer = {
+        indent_markers = { enable = false },
+        icons = {
+          show = { diagnostics=true, git=true, folder=true, file=true, folder_arrow=true },
+          diagnostics_placement = "right_align",
         },
-        filesystem = {
-          filtered_items = {
-            visible = true,
-            hide_dotfiles = false,
-            hide_gitignored = false,
-          },
-        },
-      })
+        highlight_diagnostics = "icon",
+        group_empty = true,
+        root_folder_label = function(path)
+          return vim.fn.fnamemodify(path, ":t")
+        end,
+      },
+      update_focused_file = { enable=true, update_root=false },
+      filters = { dotfiles=false, custom={"^.git$"} },
+    })
 
-      -- Keymaps
-      vim.keymap.set('n', '<C-b>', ':Neotree filesystem toggle left<CR>', { desc = "Toggle Neo-tree" })
-      vim.keymap.set("n", "<leader>b", function()
-        if vim.bo.filetype == "neo-tree" then
-          vim.cmd("wincmd p")
-        else
-          vim.cmd("Neotree focus")
-        end
-      end, { noremap = true, silent = true, desc = "Focus/switch Neo-tree" })
-    end
-  }
+    vim.keymap.set("n", "<C-b>", ":NvimTreeToggle<CR>", { desc = "Toggle Nvim-tree" })
+  end,
 }
+

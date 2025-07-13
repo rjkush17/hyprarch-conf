@@ -1,6 +1,6 @@
 return {
 	{
-		"hrsh7th/cmp-nvim-lsp"
+		"hrsh7th/cmp-nvim-lsp",
 	},
 	{
 		"L3MON4D3/LuaSnip",
@@ -45,9 +45,9 @@ return {
 		"windwp/nvim-ts-autotag",
 		config = function()
 			require("nvim-ts-autotag").setup({
-				filetypes = { "html", "xml", "javascriptreact", "typescriptreact", "eruby" }, -- Add eruby
+				filetypes = { "html", "css", "xml", "javascriptreact", "typescriptreact", "eruby" }, -- Add eruby
 			})
 		end,
 		dependencies = { "nvim-treesitter/nvim-treesitter" }, -- Ensure Treesitter is installed
-	}
+	},
 }

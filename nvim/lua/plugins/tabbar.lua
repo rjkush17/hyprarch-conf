@@ -1,4 +1,3 @@
-
 return {
   {
     "akinsho/bufferline.nvim",
@@ -6,35 +5,47 @@ return {
     config = function()
       require("bufferline").setup({
         options = {
-          numbers = "none",                     -- No buffer numbers
-          show_buffer_icons = true,             -- Display icons
-          show_buffer_close_icons = true,       -- Show close button on buffers
-          separator_style = "thick",             -- Thin separators
-          always_show_bufferline = true,        -- Always show bufferline
-          modified_icon = "●",                  -- Modified buffer icon
-          close_icon = "",                     -- Close icon
-          indicator = { style = "italic" },       -- Underline for active buffer
-
-          -- Adjust bufferline when Neotree is open
+          numbers = "none",
+          show_buffer_icons = true,
+          show_close_icon = false,       -- remove main close icon
+          show_buffer_close_icons = false, -- remove buffer close icons
+          separator_style = "thick",     -- or try "padded_slant"
+          always_show_bufferline = true,
+          indicator = { style = "underline" }, -- subtle underline instead of bold block
+          modified_icon = "●",
+          close_icon = "",
+          max_name_length = 18,          -- truncate long names
+          tab_size = 20,
+          diagnostics = "nvim_lsp",
           offsets = {
             {
-              filetype = "neo-tree",
-              text = "File Explorer",
+              filetype = "NvimTree",
+              text = "━━━   File Explorer  ━━━",
               text_align = "center",
               separator = true,
             }
           },
-          
+
           custom_filter = function(buf_number)
-            return true -- Display all buffers
+            return true
           end,
+          -- optional: highlight inactive tabs differently
+          highlights = {
+            buffer_selected = {
+              bold = true,
+              italic = false,
+            },
+            fill = {
+              bg = "#1e1e2e", -- match your colorscheme background
+            },
+          },
         },
       })
 
       -- Keybindings for buffer navigation
       vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext<CR>", { noremap = true, silent = true })
       vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", { noremap = true, silent = true })
-      vim.keymap.set("n", "<leader>x", ":bdelete<CR>", { noremap = true, silent = true }) -- Close current tab
+      vim.keymap.set("n", "<leader>x", ":bdelete<CR>", { noremap = true, silent = true })
     end,
   },
 }

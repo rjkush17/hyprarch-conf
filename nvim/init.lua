@@ -12,6 +12,9 @@ vim.o.relativenumber = true -- Enable relative line numbers
 vim.o.cursorline = true     -- Highlight the current line
 vim.cmd [[highlight CursorLineNr guifg=#61afef gui=bold]]
 
+vim.keymap.set("i", "<C-o>", "<Esc>o", { desc = "Insert new line below" })
+vim.keymap.set("i", "<C-O>", "<Esc>O", { desc = "Insert new line above" })
+
 
 vim.api.nvim_create_autocmd("BufEnter", {
  pattern = { "*.png", "*.jpg", "*.jpeg", "*.gif", "*.webp" },
