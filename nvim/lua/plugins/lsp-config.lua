@@ -31,10 +31,7 @@ return {
 			lspconfig.ruby_lsp.setup({})
 
 			-- Key mappings for LSP functionality
-			vim.keymap.set('n', 'K', vim.lsp.buf.hover, { desc = "LSP Hover" }) -- Fix typo: 'k' -> 'K'
-			vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = "Go to Definition" })
-			vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = "Code Action" })
-		end
+				end
 	}
 }
 

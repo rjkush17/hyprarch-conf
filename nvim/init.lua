@@ -1,6 +1,7 @@
 require("config.lazy")
 require("nvim-configs")
 require("dashboard")
+require("keymaps")
 
 -- autosave tddf
 vim.opt.tabstop = 6         -- Number of spaces a tab counts for

@@ -4,10 +4,7 @@ return {
   config = function()
     require("live-server").setup()
 
-    -- Keybindings to control the live server
-    vim.api.nvim_set_keymap("n", "<leader>ls", ":LiveServerStart<CR>", { noremap = true, silent = true })
-    vim.api.nvim_set_keymap("n", "<leader>le", ":LiveServerStop<CR>", { noremap = true, silent = true })
-  end,
+    end,
   ft = { "html", "css", "js" }  -- Load only for these filetypes
 }
 

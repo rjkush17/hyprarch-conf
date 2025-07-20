@@ -57,18 +57,7 @@ return {
       },
     }
 
-    -- Keybindings
-    vim.keymap.set("n", "]t", function()
-      require("todo-comments").jump_next()
-    end, { desc = "Next todo comment" })
 
-    vim.keymap.set("n", "[t", function()
-      require("todo-comments").jump_prev()
-    end, { desc = "Previous todo comment" })
-
-    -- Telescope integration
-  vim.keymap.set("n", "<C-T>", ":TodoTelescope<CR>", { desc = "Open TODOs with Telescope" })
-  vim.keymap.set("n", "T", ":TodoLocList<CR>", { desc = "Open TODOs in Location List" })
   end
 }
 

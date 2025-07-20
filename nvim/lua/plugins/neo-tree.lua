@@ -22,7 +22,7 @@ return {
       filters = { dotfiles=false, custom={"^.git$"} },
     })
 
-    vim.keymap.set("n", "<C-b>", ":NvimTreeToggle<CR>", { desc = "Toggle Nvim-tree" })
+   
   end,
 }
 
