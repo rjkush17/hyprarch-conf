@@ -53,17 +53,17 @@ vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
 
 -- ⚡ flash.nvim Keybindings for fast navigation
  -- Jump to word/char using Flash in normal, visual, operator-pending modes
-vim.keymap.set({ "n", "x", "o" }, "<leader>s",function()
+vim.keymap.set({ "n", "x", "o" }, "s",function()
 	require("flash").jump()
 end, { noremap = true, silent = true, desc = "Flash Jump" })
 
 -- Treesitter-based jump (scope-aware) in normal, visual, operator-pending modes
-vim.keymap.set({ "n", "x", "o" }, "<leader>S", function()
+vim.keymap.set({ "n", "x", "o" }, "S", function()
 	require("flash").treesitter()
 end, { noremap = true, silent = true, desc = "Flash Treesitter" })
 
 -- Remote jump from operator-pending mode (like targets.vim)
-vim.keymap.set("o", "<leader>fr", function()
+vim.keymap.set("o", "fr", function()
 	require("flash").remote()
 end, { noremap = true, silent = true, desc = "Flash Remote" })
 
