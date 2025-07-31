@@ -65,9 +65,8 @@
       "connected": " 󰂱 " // Bigger Bluetooth Connected
     },
     "tooltip": false,
-    "exec": "bluetoothctl show | grep -q 'Powered: yes' && echo 'enabled' || echo 'disabled'",
     "interval": 2,
-    "on-click": "blueman-manager"
+    "on-click": "blueberry"
   },
   "cpu": {
     "format": "\uf4bc  {usage}%",

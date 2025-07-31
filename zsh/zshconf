@@ -103,6 +103,10 @@ alias extract='a() {
 }; a'
 # Show all aliases
 alias aa='alias'
+# show files and folders in color and icosn
+alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+
+alias lsa='eza --color=always --long --git --icons=always --time=modified --sort=name'
 
 # ----------------------------------------------------------
 # Environment Variables
