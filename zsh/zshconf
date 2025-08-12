@@ -9,7 +9,7 @@
 # Fetch paywal color in terminal
 (cat ~/.cache/wal/sequences)
 # Fastfetch for cool system info on shell start
-fastfetch
+sh ~/.config/Script/fastfetch_random.sh
 
 # ----------------------------------------------------------
 # Oh My Zsh Configuration
@@ -107,6 +107,15 @@ alias aa='alias'
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 
 alias lsa='eza --color=always --long --git --icons=always --time=modified --sort=name'
+
+alias fast="sh ~/.config/Script/fastfetch_random.sh"
+
+# ----------------------------------------------------------
+# Ruby and rbenv shell Environment
+# ----------------------------------------------------------
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init - bash)"
 
 # ----------------------------------------------------------
 # Environment Variables
