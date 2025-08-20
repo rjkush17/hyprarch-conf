@@ -5,7 +5,7 @@ return {
             execution_message = {
                 enabled = false,
                 message = function() -- Custom message on save
-                    return ""
+                    return "󰄳 File saved successfully!"
                 end,
                 dim = 0.18,   -- Opacity of the message
                 cleaning_interval = 2000, -- Message disappears after 2 second

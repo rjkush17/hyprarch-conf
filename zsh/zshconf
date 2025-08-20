@@ -43,8 +43,18 @@ fi
 # Aliases - Quick Shortcuts & Fun Commands
 # ----------------------------------------------------------
 
-# Funny alias to replace sudo with "fucking"
+# Funny alias to replace sudo and pacman with "fucking"
 alias fucking='sudo'
+alias batman='pacman'
+# Pacman aliases like apt
+alias install='-S'          # install packages
+alias update='-Syu'         # update system
+alias uninstall='-Rns'      # uninstall with deps
+alias search='-Ss'               # search package
+alias list='-Qs'                 # list installed
+alias info='-Si'                 # show info
+alias autoremove='-Rns $(pacman -Qtdq)'  # remove orphans
+
 # Quick up one directory
 alias ..='cd ..'
 # Jump to ~/.config

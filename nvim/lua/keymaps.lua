@@ -13,28 +13,42 @@ map("n", "<leader>tp", function()
 	require("todo-comments").jump_prev()
 end, vim.tbl_extend("force", opts, { desc = "Previous todo comment" }))
 
-
 -- Telescope integration
 -- Open all TODO comments using Telescope UI
-vim.keymap.set("n", "<leader>tt", ":TodoTelescope<CR>", { desc = "Open TODOs with Telescope", noremap = true, silent = true })
+vim.keymap.set(
+	"n",
+	"<leader>tt",
+	":TodoTelescope<CR>",
+	{ desc = "Open TODOs with Telescope", noremap = true, silent = true }
+)
 -- Open all TODO comments in the Location List
-vim.keymap.set("n", "<leader>tl", ":TodoLocList<CR>", { desc = "Open TODOs in Location List", noremap = true, silent = true })
+vim.keymap.set(
+	"n",
+	"<leader>tl",
+	":TodoLocList<CR>",
+	{ desc = "Open TODOs in Location List", noremap = true, silent = true }
+)
 
 -- Plugin: telescope.nvim → 🔍 Find files using Telescope's built-in file finder
-vim.keymap.set("n", "<leader>p", require("telescope.builtin").find_files, { desc = "Find Files", noremap = true, silent = true })
+vim.keymap.set(
+	"n",
+	"<leader>p",
+	require("telescope.builtin").find_files,
+	{ desc = "Find Files", noremap = true, silent = true }
+)
 
 -- Live grep with Telescope
 vim.keymap.set("n", "<leader>tg", "<cmd>Telescope live_grep<CR>", { noremap = true, silent = true })
 
 -- 🔀 vim-visual-multi keymaps (All start with <leader>v)
 vim.g.VM_maps = {
-  ["Find Under"]          = "<leader>vd", -- Select word under cursor
-  ["Find Subword Under"]  = "<leader>vd", -- Select subword under cursor
-  ["Remove Region"]       = "<leader>vx", -- Remove current cursor/region
-  ["Skip Region"]         = "<leader>vn", -- Skip current match
-  ["Undo"]                = "<leader>vu", -- Undo last selection
-  ["Redo"]                = "<leader>vr", -- Redo last undone selection
-  ["Start Regex Search"]  = "<leader>v/", -- Regex search fr multi-cursor
+	["Find Under"] = "<leader>vd", -- Select word under cursor
+	["Find Subword Under"] = "<leader>vd", -- Select subword under cursor
+	["Remove Region"] = "<leader>vx", -- Remove current cursor/region
+	["Skip Region"] = "<leader>vn", -- Skip current match
+	["Undo"] = "<leader>vu", -- Undo last selection
+	["Redo"] = "<leader>vr", -- Redo last undone selection
+	["Start Regex Search"] = "<leader>v/", -- Regex search fr multi-cursor
 }
 
 -- 📦 bufferline.nvim Keybindings for buffer navigation
@@ -46,14 +60,12 @@ vim.keymap.set("n", "<leader>bp", ":BufferLineCyclePrev<CR>", { noremap = true, 
 -- Close current buffer
 vim.keymap.set("n", "<leader>x", ":bdelete<CR>", { noremap = true, silent = true })
 
-
 -- none-ls.nvim
 vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
 
-
 -- ⚡ flash.nvim Keybindings for fast navigation
- -- Jump to word/char using Flash in normal, visual, operator-pending modes
-vim.keymap.set({ "n", "x", "o" }, "s",function()
+-- Jump to word/char using Flash in normal, visual, operator-pending modes
+vim.keymap.set({ "n", "x", "o" }, "s", function()
 	require("flash").jump()
 end, { noremap = true, silent = true, desc = "Flash Jump" })
 
@@ -66,8 +78,6 @@ end, { noremap = true, silent = true, desc = "Flash Treesitter" })
 vim.keymap.set("o", "fr", function()
 	require("flash").remote()
 end, { noremap = true, silent = true, desc = "Flash Remote" })
-
-
 
 -- ufo.nvim Keybindings for folding
 -- Open all folds
@@ -85,22 +95,20 @@ vim.api.nvim_set_keymap("n", "<leader>nh", ":NoiceHistory<CR>", { noremap = true
 -- project.nvim
 vim.keymap.set("n", "<leader>fp", ":Telescope projects<CR>", { noremap = true, silent = true })
 
-
 -- telescope-file-browser.nvim: Browse all project folders
 vim.keymap.set("n", "<leader>sp", function()
-  require("telescope").extensions.file_browser.file_browser({
-    path = "~/Projects",  -- 👈 change to your main folder
-    depth = 4,            -- how deep folder tree should go
-    hidden = true,
-    grouped = true,
-    select_buffer = true,
-  })
+	require("telescope").extensions.file_browser.file_browser({
+		path = "~/Projects", -- 👈 change to your main folder
+		depth = 4, -- how deep folder tree should go
+		hidden = true,
+		grouped = true,
+		select_buffer = true,
+	})
 end, { desc = "Browse All Projects" })
-
 
 -- telescope-projects extension
 vim.keymap.set("n", "<leader>fp", function()
-  require("telescope").extensions.projects.projects()
+	require("telescope").extensions.projects.projects()
 end, { desc = "Open Project List" })
 
 --  nvim-neoclip
@@ -128,7 +136,6 @@ vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<CR>", { desc = "Open LazyGit" })
 vim.api.nvim_set_keymap("n", "<leader>ls", ":LiveServerStart<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>le", ":LiveServerStop<CR>", { noremap = true, silent = true })
 
-
 -- Comment.nvim Keybindings for toggling comments
 
 -- Toggle comment in normal mode
@@ -140,7 +147,6 @@ end, { desc = "Toggle comment (linewise)", silent = true })
 vim.keymap.set("v", "<leader>/", function()
 	require("Comment.api").toggle.linewise(vim.fn.visualmode())
 end, { desc = "Toggle comment (visual)", silent = true })
-
 
 --  Avante Plugins
 vim.keymap.set("n", "<leader>aa", "<cmd>AvanteToggle<CR>", { desc = "Avante Toggle" })
@@ -158,3 +164,5 @@ vim.keymap.set("n", "<leader>aM", "<cmd>AvanteModels<CR>", { desc = "Avante Mode
 vim.keymap.set("n", "<leader>a?", "<cmd>AvanteSwitchSelectorProvider<CR>", { desc = "Avante Switch Selector" })
 vim.keymap.set("n", "<leader>aT", "<cmd>AvanteShowRepoMap<CR>", { desc = "Avante Repo Map" })
 vim.keymap.set("n", "<leader>aC", "<cmd>AvanteClear<CR>", { desc = "Avante Clear Chat" })
+
+

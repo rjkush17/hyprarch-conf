@@ -6,14 +6,16 @@ return {
         "rcarriga/nvim-notify",
     },
     config = function()
-        require("noice").setup({})
+        require("noice").setup()
         require("notify").setup({
-            stages = "fade_in_slide_out",
+            stages = "slide",
             timeout = 2000,
             render = "compact",
             background_colour = "#000000",
-            width = 45, -- Set the maximum width for notifications
-            height = 4, -- Set the maximum height for notification s
+            max_width = 45,
+            max_height = 4,
+            top_down = false, -- show in bottom-right
         })
+        vim.notify = require("notify")
     end,
 }
