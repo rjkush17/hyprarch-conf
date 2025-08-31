@@ -5,7 +5,7 @@
     "tooltip-format": "Menu",
     "on-click": "rofi -show drun"
   },
-"custom/clip": {
+  "custom/clip": {
     "format": "",
     "tooltip": true,
     "tooltip-format": "Menu",
@@ -17,16 +17,16 @@
     "warp-on-scroll": false,
     "format": "{icon}",
     "format-icons": {
-        "1": "𝐈",
-        "2": "𝐈𝐈",
-        "3": "𝐈𝐈𝐈",
-        "4": "𝐈𝐕",
-        "5": "𝐕",
-        "6": "𝐕𝐈",
-        "7": "𝐕𝐈𝐈",
-        "8": "𝐕𝐈𝐈𝐈",
-        "9": "𝐈𝐗",
-        "10": "𝐗"
+      "1": "I",
+      "2": "II",
+      "3": "III",
+      "4": "IV",
+      "5": "V",
+      "6": "VI",
+      "7": "VII",
+      "8": "VIII",
+      "9": "IX",
+      "10": "X"
     }
   },
 
@@ -50,7 +50,7 @@
   },
 
   "network": {
-    "format-wifi": "    {signalStrength}%", 
+    "format-wifi": "    {signalStrength}%",
     "format-ethernet": "󰈀 {ipaddr}/{cidr}",
     "tooltip-format": "{}",
     "format-linked": "{ifname} (No IP) 󰌘",

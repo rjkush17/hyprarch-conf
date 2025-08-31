@@ -81,22 +81,4 @@ return {
 			},
 		},
 	},
-	-- Lua
-	{
-		"sindrets/diffview.nvim",
-		cmd = { "DiffviewOpen", "DiffviewClose", "DiffviewToggleFiles", "DiffviewFocusFiles" },
-		dependencies = { "nvim-lua/plenary.nvim" },
-		config = function()
-			require("diffview").setup({
-				use_icons = true, -- Use Nerd Font icons
-				enhanced_diff_hl = true, -- Treesitter syntax highlight in diffs
-				view = {
-					merge_tool = {
-						layout = "diff3_mixed", -- better for 3-way merge view
-						disable_diagnostics = true,
-					},
-				},
-			})
-		end,
-	},
 }

@@ -7,8 +7,8 @@ if [ -z "$interface" ]; then
 else
     ssid=$(iwgetid -r)
     if [ -z "$ssid" ]; then
-        echo " 📶 $ssid "
+        echo " 󰖩  $ssid "
     else
-        echo "📶 $ssid"
+        echo "󰖩  $ssid"
     fi
 fi
