@@ -4,7 +4,7 @@
   /* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
   font-family:
     "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   padding: 0;
   margin: 0;
   font-weight: bolder;
@@ -23,16 +23,16 @@ window#waybar {
 
 .modules-left {
   margin-left: 0px;
-  padding: 6px;
+  padding: 2px;
 }
 .modules-middle {
   margin-left: 0;
   margin-right: 0;
-  padding: 6px;
+  padding: 2px;
 }
 .modules-right {
   margin-right: 0px;
-  padding: 6px;
+  padding: 2px;
 }
 #clock,
 #battery,

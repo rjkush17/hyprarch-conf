@@ -1,0 +1,52 @@
+MenuBar=Disabled
+
+[Baloo KEditCommentDialog]
+1920x1080 screen: Window-Maximized=true
+
+[CompactMode]
+IconSize=22
+
+[DetailsMode]
+PreviewSize=96
+
+[General]
+GlobalViewProps=false
+ModifiedStartupSettings=true
+ShowFullPath=true
+ShowFullPathInTitlebar=true
+ShowStatusBar=FullWidth
+ShowToolTips=true
+Version=202
+ViewPropsTimestamp=2025,4,1,22,41,33.159
+
+[IconsMode]
+IconSize=48
+MaximumTextLines=5
+PreviewSize=192
+UseSystemFont=false
+ViewFont=Sans Serif,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=32
+
+[MainWindow]
+MenuBar=Disabled
+
+[MainWindow][Toolbar mainToolBar]
+ToolButtonStyle=IconOnly
+
+[PlacesPanel]
+IconSize=32
+
+[PreviewSettings]
+Plugins=ffmpegthumbnailer,appimagethumbnail,audiothumbnail,avif,evince,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,heif,imagethumbnail,jpegthumbnail,jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,gsf-office,opendocumentthumbnail,svgthumbnail,gdk-pixbuf-thumbnailer
+
+[Toolbar mainToolBar]
+ToolButtonStyle=IconOnly
+
+[UiSettings]
+ColorScheme=Orchis-solidDark
+
+[ViewPropertiesDialog]
+1920x1080 screen: Window-Maximized=true
