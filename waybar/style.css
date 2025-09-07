@@ -180,6 +180,28 @@ window#waybar {
 }
 #custom-arch,
 #custom-clip {
-  font-size: 18px;
-  padding: 5px 7px 5px 5px;
+  font-size: 20px;
+  padding: 5px 9px 5px 9px;
 }
+#tray menu{
+    background-color: @background;
+    border-radius: 8px;
+    padding: 5px;
+    color: @color2;
+}
+
+#tray menu menuitem {
+  padding: 5px 10px;
+  font-weight: normal;  
+}
+#tray menu separator {
+    min-height: 1px;      /* thickness */
+    background-color: @color2; /* line color */
+    margin: 4px 6px;       /* spacing around separator */
+}
+
+#tray menu menuitem:hover {
+    background-color: @color2;
+    color: @background;
+}
+
