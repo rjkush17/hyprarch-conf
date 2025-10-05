@@ -1,0 +1,135 @@
+@import url('../../.cache/wal/colors-waybar.css');
+
+* {
+    /* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
+    font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+window#waybar {
+    background: rgba(26, 27, 38, 0.0);
+    color: @color2;
+    font-family: 
+        SpaceMono Nerd Font,
+        feather;
+}
+
+.modules-left{
+  border: @color2 solid 2px;
+    background: @background;
+    opacity : 0.7;
+    margin: 5px;
+    border-radius: 8px
+}
+
+.modules-middle,
+.modules-right{
+    margin: 5px
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#language,
+#bluetooth,
+#mpd {
+    padding:0 7px;
+    border-radius: 15px;
+    border: @color2 solid 2px;
+    background: @background;
+    opacity : 0.7;
+    margin: 5px 5px 0px 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    min-width: 15px; 
+}
+
+#clock:hover,
+#battery:hover,
+#cpu:hover,
+#memory:hover,
+#disk:hover,
+#temperature:hover,
+#backlight:hover,
+#network:hover,
+#pulseaudio:hover,
+#wireplumber:hover,
+#custom-media:hover,
+#tray:hover,
+#mode:hover,
+#idle_inhibitor:hover,
+#scratchpad:hover,
+#power-profiles-daemon:hover,
+#language:hover,
+#bluetooth:hover,
+#bluetooth:hover,
+#custom-wlogout:hover,
+#mpd:hover {
+    background: rgba(26, 27, 38, 0.9);
+}
+
+
+#workspaces button {
+background: rgba(0, 0, 8, .7);
+  font-family:
+    SpaceMono Nerd Font,
+    feather;
+  font-weight: 900;
+    margin: 5px 2px;
+  font-size: 13pt;
+  color: #c0caf5;
+  border:none;
+  border-radius: 7px;
+border: @color2 solid 2px;
+
+}
+
+
+#workspaces button.active {
+    background: @color2;
+    color: @background;
+    transition: all 0.4s ease-out 0.4s;
+}
+
+#workspaces button:hover {
+  background: #11111b;
+  color: #cdd6f4;
+  box-shadow: none;
+}
+
+#custom-arch {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0 10px;
+    font-size: 25px;
+    transition: color .5s;
+    color: #1793d1;
+}
+#custom-arch:hover {
+    color: #1793d1;
+}
+#custom-wlogout {
+    font-size: 25px; /* Adjust size as needed */
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0px 10px;
+}
+
+#taskbar{
+    font-size: 14px;
+   border-radius: 8px; 
+}
+

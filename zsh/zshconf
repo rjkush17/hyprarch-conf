@@ -129,7 +129,7 @@ fp() {
   nvim .
 }
 
-fc() {
+flc() {
   local target
   target=$(find ~/.config -mindepth 1 -maxdepth 2 -type d -printf "%P/\n" -o -type f -printf "%P\n" \
     | fzf --height=40% --reverse --border) || return
