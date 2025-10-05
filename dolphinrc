@@ -1,0 +1,64 @@
+MenuBar=Disabled
+
+[Baloo KEditCommentDialog]
+1920x1080 screen: Window-Maximized=true
+
+[CompactMode]
+IconSize=22
+MaximumTextWidthIndex=2
+UseSystemFont=false
+ViewFont=Adwaita Mono,14,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+
+[DetailsMode]
+PreviewSize=32
+
+[General]
+AutoExpandFolders=true
+CloseActiveSplitView=false
+GlobalViewProps=false
+OpenExternallyCalledFolderInNewTab=true
+ShowFullPath=true
+ShowFullPathInTitlebar=true
+ShowStatusBar=FullWidth
+SingleClick=false
+TerminalApplication=kitty
+Version=202
+ViewPropsTimestamp=2025,9,16,9,20,30.963
+
+[IconsMode]
+IconSize=48
+MaximumTextLines=2
+PreviewSize=80
+
+[InformationPanel]
+dateFormat=ShortFormat
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=32
+
+[MainWindow]
+MenuBar=Disabled
+
+[MainWindow][Toolbar mainToolBar]
+ToolButtonStyle=IconOnly
+
+[PlacesPanel]
+IconSize=32
+
+[PreviewSettings]
+Plugins=ffmpegthumbnailer,appimagethumbnail,audiothumbnail,avif,evince,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,heif,imagethumbnail,jpegthumbnail,jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,gsf-office,opendocumentthumbnail,gsthumbnail,rawthumbnail,librsvg,svgthumbnail,textthumbnail,ffmpegthumbs,gdk-pixbuf-thumbnailer
+
+[Search]
+Location=Everywhere
+
+[Toolbar mainToolBar]
+ToolButtonStyle=IconOnly
+
+[UiSettings]
+ColorScheme=Orchis-solidDark
+
+[ViewPropertiesDialog]
+1920x1080 screen: Height=437
+1920x1080 screen: Width=357
+1920x1080 screen: Window-Maximized=true

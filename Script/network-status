@@ -1,0 +1,14 @@
+#!/bin/bash
+
+interface=$(ip route | grep '^default' | awk '{print $5}' | head -n 1)
+
+if [ -z "$interface" ]; then
+    echo " 󰖪 Disconnected"
+else
+    ssid=$(iwgetid -r)
+    if [ -z "$ssid" ]; then
+        echo " 󰖩  $ssid "
+    else
+        echo "󰖩  $ssid"
+    fi
+fi

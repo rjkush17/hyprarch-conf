@@ -1,0 +1,21 @@
+
+#!/bin/bash
+
+STATE_FILE="$HOME/.cache/hypr_layout_state"
+
+if [[ -f "$STATE_FILE" ]]; then
+    layout=$(cat "$STATE_FILE")
+else
+    layout="dwindle"
+fi
+
+if [[ "$layout" == "dwindle" ]]; then
+    hyprctl keyword general:layout master
+    echo "master" > "$STATE_FILE"
+    notify-send -i "$HOME/.config/Script/icons/layout.png" "  Layout Changed" "Switched to Master Tiling Layout"
+else
+    hyprctl keyword general:layout dwindle
+    echo "dwindle" > "$STATE_FILE"
+    notify-send -i "$HOME/.config/Script/icons/layout.png" " Layout Changed" "Switched to Dwindle Tiling Layout"
+fi
+
