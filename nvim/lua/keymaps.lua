@@ -1,168 +1,270 @@
+--------------------------------------------------------------------------------
+-- 🧩 Core Keymaps (Base Neovim Configuration)
+-- Description: -- Keymaps configuration for all installed Neovim plugins and some my customer keymaps
+--------------------------------------------------------------------------------
+
+-- Ensure 'vim' global is recognized by LSP
+---@diagnostic disable-next-line: undefined-global
+local vim = vim
+
+-- Short alias for setting keymaps
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
---todo-comments.nvim Keybindings
+--------------------------------------------------------------------------------
+-- ⌨️ Insert Mode Keymaps
+--------------------------------------------------------------------------------
 
--- Jump to next TODO comment (via todo-comments.nvim)
+-- Insert a new line below and stay in insert mode
+map("i", "<C-o>", "<Esc>o", { desc = "Insert new line below" })
+
+-- Insert a new line above and stay in insert mode
+map("i", "<C-O>", "<Esc>O", { desc = "Insert new line above" })
+
+-- ✏️ Move Cursor in Insert Mode (using Ctrl + h/j/k/l)
+map("i", "<C-h>", "<Left>", opts) -- Move cursor left
+map("i", "<C-j>", "<Down>", opts) -- Move cursor down
+map("i", "<C-k>", "<Up>", opts) -- Move cursor up
+map("i", "<C-l>", "<Right>", opts) -- Move cursor right
+
+--------------------------------------------------------------------------------
+-- 🧩 Plugin: todo-comments.nvim
+--------------------------------------------------------------------------------
+
+-- Jump to next TODO comment
 map("n", "<leader>tn", function()
 	require("todo-comments").jump_next()
-end, vim.tbl_extend("force", opts, { desc = "Next todo comment" }))
+end, vim.tbl_extend("force", opts, { desc = "Next TODO comment" }))
 
--- Jump to previous TODO comment (via todo-comments.nvim)
+-- Jump to previous TODO comment
 map("n", "<leader>tp", function()
 	require("todo-comments").jump_prev()
-end, vim.tbl_extend("force", opts, { desc = "Previous todo comment" }))
+end, vim.tbl_extend("force", opts, { desc = "Previous TODO comment" }))
 
--- Telescope integration
+-- 🔭 Telescope Integration
+
 -- Open all TODO comments using Telescope UI
-vim.keymap.set(
+map(
 	"n",
 	"<leader>tt",
 	":TodoTelescope<CR>",
-	{ desc = "Open TODOs with Telescope", noremap = true, silent = true }
+	vim.tbl_extend("force", opts, {
+		desc = "Open all TODOs with Telescope",
+	})
 )
+
 -- Open all TODO comments in the Location List
-vim.keymap.set(
+map(
 	"n",
 	"<leader>tl",
 	":TodoLocList<CR>",
-	{ desc = "Open TODOs in Location List", noremap = true, silent = true }
+	vim.tbl_extend("force", opts, {
+		desc = "Open all TODOs in Location List",
+	})
 )
 
--- Plugin: telescope.nvim → 🔍 Find files using Telescope's built-in file finder
-vim.keymap.set(
+--------------------------------------------------------------------------------
+-- 🧩 Plugin: telescope.nvim
+--------------------------------------------------------------------------------
+
+-- Find files using Telescope's built-in file finder
+map(
 	"n",
 	"<C-p>",
 	require("telescope.builtin").find_files,
-	{ desc = "Find Files", noremap = true, silent = true }
+	vim.tbl_extend("force", opts, {
+		desc = "Find files",
+	})
 )
 
 -- Live grep with Telescope
-vim.keymap.set("n", "<C-g>", "<cmd>Telescope live_grep<CR>", { noremap = true, silent = true })
+map(
+	"n",
+	"<C-g>",
+	"<cmd>Telescope live_grep<CR>",
+	vim.tbl_extend("force", opts, {
+		desc = "Live grep search",
+	})
+)
 
--- 🔀 vim-visual-multi keymaps (All start with <leader>v)
+--------------------------------------------------------------------------------
+-- 🧩 Plugin: vim-visual-multi
+--------------------------------------------------------------------------------
+
 vim.g.VM_maps = {
 	["Find Under"] = "<leader>vd", -- Select word under cursor
 	["Find Subword Under"] = "<leader>vd", -- Select subword under cursor
-	["Remove Region"] = "<leader>vx", -- Remove current cursor/region
+	["Remove Region"] = "<leader>vx", -- Remove current region
 	["Skip Region"] = "<leader>vn", -- Skip current match
 	["Undo"] = "<leader>vu", -- Undo last selection
 	["Redo"] = "<leader>vr", -- Redo last undone selection
-	["Start Regex Search"] = "<leader>v/", -- Regex search fr multi-cursor
+	["Start Regex Search"] = "<leader>v/", -- Start regex search for multi-cursor
 }
 
--- 📦 bufferline.nvim Keybindings for buffer navigation
+--------------------------------------------------------------------------------
+-- 🧩 Plugin: bufferline.nvim
+--------------------------------------------------------------------------------
 
 -- Go to next buffer
-vim.keymap.set("n", "<leader>bn", ":BufferLineCycleNext<CR>", { noremap = true, silent = true })
+map(
+	"n",
+	"<leader>bn",
+	":BufferLineCycleNext<CR>",
+	vim.tbl_extend("force", opts, {
+		desc = "Next buffer",
+	})
+)
+
 -- Go to previous buffer
-vim.keymap.set("n", "<leader>bp", ":BufferLineCyclePrev<CR>", { noremap = true, silent = true })
+map(
+	"n",
+	"<leader>bp",
+	":BufferLineCyclePrev<CR>",
+	vim.tbl_extend("force", opts, {
+		desc = "Previous buffer",
+	})
+)
+
 -- Close current buffer
-vim.keymap.set("n", "<leader>x", ":bdelete<CR>", { noremap = true, silent = true })
+map(
+	"n",
+	"<leader>x",
+	":bdelete<CR>",
+	vim.tbl_extend("force", opts, {
+		desc = "Close current buffer",
+	})
+)
 
--- none-ls.nvim
-vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+--------------------------------------------------------------------------------
+-- 🧩 Plugin: none-ls.nvim
+--------------------------------------------------------------------------------
 
--- ⚡ flash.nvim Keybindings for fast navigation
--- Jump to word/char using Flash in normal, visual, operator-pending modes
-vim.keymap.set({ "n", "x", "o" }, "s", function()
+-- Format current buffer using LSP
+map(
+	"n",
+	"<leader>gf",
+	vim.lsp.buf.format,
+	vim.tbl_extend("force", opts, {
+		desc = "Format current buffer",
+	})
+)
+
+--------------------------------------------------------------------------------
+-- ⚡ Plugin: flash.nvim
+--------------------------------------------------------------------------------
+
+-- Jump to any word/character using Flash in normal, visual, operator-pending modes
+map({ "n", "x", "o" }, "s", function()
 	require("flash").jump()
 end, { noremap = true, silent = true, desc = "Flash Jump" })
 
--- Treesitter-based jump (scope-aware) in normal, visual, operator-pending modes
-vim.keymap.set({ "n", "x", "o" }, "S", function()
+-- Treesitter-aware jump (scope-aware) in normal, visual, operator-pending modes
+map({ "n", "x", "o" }, "S", function()
 	require("flash").treesitter()
 end, { noremap = true, silent = true, desc = "Flash Treesitter" })
 
 -- Remote jump from operator-pending mode (like targets.vim)
-vim.keymap.set("o", "fr", function()
+map("o", "fr", function()
 	require("flash").remote()
 end, { noremap = true, silent = true, desc = "Flash Remote" })
 
--- ufo.nvim Keybindings for folding
--- Open all folds
-vim.keymap.set("n", "<leader>za", require("ufo").openAllFolds, { desc = "Open all folds" })
--- Close all folds
-vim.keymap.set("n", "<leader>zc", require("ufo").closeAllFolds, { desc = "Close all folds" })
--- Toggle a fold under cursor
-vim.keymap.set("n", "z", "za", { desc = "Toggle fold under cursor" })
+--------------------------------------------------------------------------------
+-- 🗂️ Plugin: ufo.nvim
+--------------------------------------------------------------------------------
 
--- noice.nvim
+-- Open all folds
+map("n", "<leader>za", require("ufo").openAllFolds, { desc = "Open all folds" })
+
+-- Close all folds
+map("n", "<leader>zc", require("ufo").closeAllFolds, { desc = "Close all folds" })
+
+-- Toggle fold under cursor
+map("n", "z", "za", { desc = "Toggle fold under cursor" })
+
+--------------------------------------------------------------------------------
+-- ✨ Plugin: noice.nvim
+--------------------------------------------------------------------------------
+
+-- Open Noice
 vim.api.nvim_set_keymap("n", "<leader>n", ":Noice<CR>", { noremap = true, silent = true })
+
+-- Dismiss Noice notifications
 vim.api.nvim_set_keymap("n", "<leader>c", ":NoiceDismiss<CR>", { noremap = true, silent = true })
+
+-- Show Noice history
 vim.api.nvim_set_keymap("n", "<leader>nh", ":NoiceHistory<CR>", { noremap = true, silent = true })
 
--- project.nvim
-vim.keymap.set("n", "<leader>fp", ":Telescope projects<CR>", { noremap = true, silent = true })
+--------------------------------------------------------------------------------
+-- 📋 Plugin: nvim-neoclip
+--------------------------------------------------------------------------------
 
--- telescope-file-browser.nvim: Browse all project folders
-vim.keymap.set("n", "<leader>sp", function()
-	require("telescope").extensions.file_browser.file_browser({
-		path = "~/Projects", -- 👈 change to your main folder
-		depth = 10, -- how deep folder tree should go
-		hidden = true,
-		grouped = true,
-		select_buffer = true,
-	})
-end, { desc = "Browse All Projects" })
+-- Open Neoclip clipboard history using Telescope
+map("n", "<leader>a", ":Telescope neoclip<CR>", { noremap = true, silent = true })
 
--- telescope-projects extension
-vim.keymap.set("n", "<leader>fp", function()
-	require("telescope").extensions.projects.projects()
-end, { desc = "Open Project List" })
+--------------------------------------------------------------------------------
+-- 🌲 Plugin: neo-tree.nvim
+--------------------------------------------------------------------------------
 
---  nvim-neoclip
-vim.keymap.set("n", "<leader>a", ":Telescope neoclip<CR>", { noremap = true, silent = true })
+-- Toggle Neo-tree file explorer
+map("n", "<C-b>", ":NvimTreeToggle<CR>", { desc = "Toggle Nvim-tree" })
 
--- neo-tree.nvim
-vim.keymap.set("n", "<C-b>", ":NvimTreeToggle<CR>", { desc = "Toggle Nvim-tree" })
+--------------------------------------------------------------------------------
+-- 🧠 Plugin: nvim-lspconfig
+--------------------------------------------------------------------------------
 
---- nvim-lspconfig
+-- Show hover information
+map("n", "K", vim.lsp.buf.hover, { desc = "LSP Hover" })
 
-vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "LSP Hover" }) -- Fix typo: 'k' -> 'K'
-vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to Definition" })
-vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Action" })
+-- Go to definition
+map("n", "gd", vim.lsp.buf.definition, { desc = "Go to Definition" })
 
-vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "LSP Hover" }) -- Fix typo: 'k' -> 'K'
-vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to Definition" })
-vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Action" })
+-- Trigger code action
+map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Action" })
 
--- LazyGit
+--------------------------------------------------------------------------------
+-- 🌐 Plugin: live.server.nvim
+--------------------------------------------------------------------------------
 
-vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<CR>", { desc = "Open LazyGit" })
-
--- live.server.nvim
--- Keybindings to control the live server
+-- Start Live Server
 vim.api.nvim_set_keymap("n", "<leader>ls", ":LiveServerStart<CR>", { noremap = true, silent = true })
+
+-- Stop Live Server
 vim.api.nvim_set_keymap("n", "<leader>le", ":LiveServerStop<CR>", { noremap = true, silent = true })
 
--- Comment.nvim Keybindings for toggling comments
+--------------------------------------------------------------------------------
+-- 💬 Plugin: Comment.nvim
+--------------------------------------------------------------------------------
 
--- Toggle comment in normal mode
-vim.keymap.set("n", "<leader>/", function()
+-- Toggle comment in normal mode (linewise)
+map("n", "<leader>/", function()
 	require("Comment.api").toggle.linewise.current()
 end, { desc = "Toggle comment (linewise)", silent = true })
 
--- Toggle comment in visual mode
-vim.keymap.set("v", "<leader>/", function()
+-- Toggle comment in visual mode (linewise)
+map("v", "<leader>/", function()
 	require("Comment.api").toggle.linewise(vim.fn.visualmode())
 end, { desc = "Toggle comment (visual)", silent = true })
 
---  Avante Plugins
-vim.keymap.set("n", "<leader>aa", "<cmd>AvanteToggle<CR>", { desc = "Avante Toggle" })
-vim.keymap.set("n", "<leader>ar", "<cmd>AvanteRefresh<CR>", { desc = "Avante Refresh" })
-vim.keymap.set("n", "<leader>af", "<cmd>AvanteFocus<CR>", { desc = "Avante Focus" })
-vim.keymap.set("n", "<leader>an", "<cmd>AvanteAsk<CR>", { desc = "Avante Ask" })
-vim.keymap.set("n", "<leader>ac", "<cmd>AvanteChat<CR>", { desc = "Avante Chat" })
-vim.keymap.set("n", "<leader>acn", "<cmd>AvanteChatNew<CR>", { desc = "Avante New Chat" })
-vim.keymap.set("n", "<leader>ab", "<cmd>AvanteBuild<CR>", { desc = "Avante Build" })
-vim.keymap.set("n", "<leader>ah", "<cmd>AvanteHistory<CR>", { desc = "Avante History" })
-vim.keymap.set("n", "<leader>as", "<cmd>AvanteStop<CR>", { desc = "Avante Stop" })
-vim.keymap.set("n", "<leader>ae", "<cmd>AvanteEdit<CR>", { desc = "Avante Edit" })
-vim.keymap.set("n", "<leader>aR", "<cmd>AvanteSwitchProvider<CR>", { desc = "Avante Switch Provider" })
-vim.keymap.set("n", "<leader>aM", "<cmd>AvanteModels<CR>", { desc = "Avante Models" })
-vim.keymap.set("n", "<leader>a?", "<cmd>AvanteSwitchSelectorProvider<CR>", { desc = "Avante Switch Selector" })
-vim.keymap.set("n", "<leader>aT", "<cmd>AvanteShowRepoMap<CR>", { desc = "Avante Repo Map" })
-vim.keymap.set("n", "<leader>aC", "<cmd>AvanteClear<CR>", { desc = "Avante Clear Chat" })
+--------------------------------------------------------------------------------
+-- 🤖 Plugin: Avante
+--------------------------------------------------------------------------------
 
+map("n", "<leader>aa", "<cmd>AvanteToggle<CR>", { desc = "Avante Toggle" })
+map("n", "<leader>ar", "<cmd>AvanteRefresh<CR>", { desc = "Avante Refresh" })
+map("n", "<leader>af", "<cmd>AvanteFocus<CR>", { desc = "Avante Focus" })
+map("n", "<leader>an", "<cmd>AvanteAsk<CR>", { desc = "Avante Ask" })
+map("n", "<leader>ac", "<cmd>AvanteChat<CR>", { desc = "Avante Chat" })
+map("n", "<leader>acn", "<cmd>AvanteChatNew<CR>", { desc = "Avante New Chat" })
+map("n", "<leader>ab", "<cmd>AvanteBuild<CR>", { desc = "Avante Build" })
+map("n", "<leader>ah", "<cmd>AvanteHistory<CR>", { desc = "Avante History" })
+map("n", "<leader>as", "<cmd>AvanteStop<CR>", { desc = "Avante Stop" })
+map("n", "<leader>ae", "<cmd>AvanteEdit<CR>", { desc = "Avante Edit" })
+map("n", "<leader>aR", "<cmd>AvanteSwitchProvider<CR>", { desc = "Avante Switch Provider" })
+map("n", "<leader>aM", "<cmd>AvanteModels<CR>", { desc = "Avante Models" })
+map("n", "<leader>a?", "<cmd>AvanteSwitchSelectorProvider<CR>", { desc = "Avante Switch Selector" })
+map("n", "<leader>aT", "<cmd>AvanteShowRepoMap<CR>", { desc = "Avante Repo Map" })
+map("n", "<leader>aC", "<cmd>AvanteClear<CR>", { desc = "Avante Clear Chat" })
 
+--------------------------------------------------------------------------------
+--xxx End of keymaps xxx--
+--------------------------------------------------------------------------------

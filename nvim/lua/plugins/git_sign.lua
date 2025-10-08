@@ -72,13 +72,6 @@ return {
 				"Gedit",
 			},
 			ft = { "fugitive" },
-		},
-		{
-			"kdheepak/lazygit.nvim",
-			cmd = "LazyGit",
-			dependencies = {
-				"nvim-lua/plenary.nvim",
-			},
-		},
+		},	
 	},
 }
