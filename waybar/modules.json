@@ -122,7 +122,7 @@
   },
 
   "wlr/taskbar": {
-    "icon-size": 25,
+    "icon-size": 20,
     "spacing": 0,
     "tooltip": true,
     "on-click": "activate",

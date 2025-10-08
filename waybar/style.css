@@ -4,7 +4,7 @@
   /* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
   font-family:
     "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   padding: 0;
   margin: 0;
   font-weight: bolder;
@@ -117,11 +117,9 @@ window#waybar {
   font-weight: 900;
   margin: 5px 2px;
   padding: 0px 0px;
-  font-size: 16px;
-  color: #c0caf5;
+  font-size: 12px;
   border: none;
   border-radius: 5px;
-  border: @color2 solid 0px;
 }
 
 #taskbar button {
