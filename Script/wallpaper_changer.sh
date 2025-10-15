@@ -17,9 +17,6 @@ if [ -z "$WALLPAPER" ]; then
     exit 1
 fi
 
-# Clear any existing swww transitions to prevent overlap
- # swww clear
-
 # Define array of transition types, excluding 'none'
 TRANSITION_TYPES=("wipe" "center" "outer" "left" "right" "top" "bottom")
 
@@ -35,20 +32,14 @@ sleep 1.6
 wal -i "$WALLPAPER" -q
 
 # Wait for wal to finish writing
-sleep 0.5
-
-# Update Dunst colors
-~/.config/Script/update_dunst_colors.sh
-
+# sleep 0.5
+#
 # Restart Waybar
-
 if pgrep -x "waybar" > /dev/null; then
     killall waybar
     sleep 0.5
 fi
 
 waybar &
-
-
-#sleep 1
-# notify-send -i "$HOME/.config/Script/icons/color.png" "🎨 Theme Updated" "Wallpaper & system colors applied"
+# Update Dunst colors
+~/.config/Script/update_dunst_colors.sh
