@@ -92,6 +92,14 @@ alias ll="eza --long --icons=always --color=always"
 alias lg="eza --long --git --icons=always"
 alias lsa='eza --color=always --long --git --icons=always --time=modified --sort=name'
 
+alias t='tmux'                # start tmux
+alias ta='tmux attach -t'     # attach to session
+alias tn='tmux new -s'        # create new session
+alias tl='tmux ls'            # list sessions
+alias tk='tmux kill-session -t' # kill a session
+# Its open tmux with the nvim open
+alias tn='tmux new-session "nvim ."'
+
 # ----------------------------------------------------------
 # Ruby and rbenv shell Environment
 # ----------------------------------------------------------
@@ -146,6 +154,19 @@ flc() {
 export NODE_ENV=development
 # Ruby on Rails environment
 export RAILS_ENV=development
+
+# ----------------------------------------------------------
+# Bun.js code
+# ----------------------------------------------------------
+
+. "$HOME/.local/bin/env"
+
+# bun completions
+[ -s "/home/zatch/.bun/_bun" ] && source "/home/zatch/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
 
 # ==========================================================
 #              --- xxx END OF THE FILE xxx ---
