@@ -18,10 +18,8 @@ return {
         PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
         NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
         TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
-        BKM = { icon = " ", color = "default", alt = { "MARK", "PIN" } },
+        BKM = { icon = " ", color = "hint", alt = { "MARK", "PIN" } },
       },
-     -- MARK: Testing custome book mark
-
       gui_style = {
         fg = "NONE",
         bg = "BOLD",
