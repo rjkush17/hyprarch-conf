@@ -14,7 +14,7 @@ return {
     highlight = {
       enabled = true,
       style = "virtual_left",  -- <-- change this for VS Code-style box
-      virtual_text = "■ ",     -- character for the box
+      virtual_text = "󰀘 ",     -- character for the box
       bold = false,
       italic = false,
       priority = 175,
@@ -28,4 +28,3 @@ return {
     },
   },
 }
-
