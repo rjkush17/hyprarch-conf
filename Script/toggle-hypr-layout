@@ -1,21 +1,51 @@
-
-#!/bin/bash
+#!/usr/bin/env bash
+# toggle Hyprland layout between a scrolling layout and a tiling layout
+# improved: read current layout from hyprctl instead of trusting a state file
+# (comments added for each changed/important line)
 
 STATE_FILE="$HOME/.cache/hypr_layout_state"
 
-if [[ -f "$STATE_FILE" ]]; then
-    layout=$(cat "$STATE_FILE")
-else
-    layout="dwindle"
+# get current layout from hyprctl; parse the str: "..." value if present
+# (this handles hyprctl getoption output like: option general:layout  str: "dwindle")
+current_layout=$(hyprctl getoption general:layout 2>/dev/null | grep -oP 'str:\s*"\K[^"]+' || true)
+
+# fallback: if hyprctl didn't return anything, try reading the state file (best-effort)
+if [[ -z "$current_layout" && -f "$STATE_FILE" ]]; then
+    current_layout=$(<"$STATE_FILE")
 fi
 
-if [[ "$layout" == "dwindle" ]]; then
-    hyprctl keyword general:layout master
-    echo "master" > "$STATE_FILE"
-    notify-send -i "$HOME/.config/Script/icons/layout.png" "  Layout Changed" "Switched to Master Tiling Layout"
+# Normalise to lowercase for easier comparisons
+current_layout_lc="${current_layout,,}"
+
+# Which names we consider "scrolling" layouts (plugin names vary)
+# You can add/remove variants your system uses: scroller, scrolling, hyprscroller, hyprscrolling
+scroll_names=("scrolling" "scroller" "hyprscroller" "hyprscrolling" "scroller_layout")
+
+# Which tiling layout to switch back to if we detect a scrolling layout
+# default to dwindle (common BSP-like tiling). Replace with 'master' or another if you prefer.
+tiling_target="dwindle"
+
+# Function to check if current layout matches any of the scrolling variants
+is_scrolling=false
+for name in "${scroll_names[@]}"; do
+    if [[ "$current_layout_lc" == *"$name"* ]]; then
+        is_scrolling=true
+        break
+    fi
+done
+
+# Toggle logic: if currently scrolling -> switch to tiling_target, else switch to 'scrolling'
+if [[ "$is_scrolling" == true ]]; then
+    # set tiling layout
+    hyprctl keyword general:layout "$tiling_target"
+    echo "$tiling_target" > "$STATE_FILE"
+    notify-send -i "$HOME/.config/Script/icons/layout.png" "Layout Changed" "Switched to $tiling_target (tiling)"
 else
-    hyprctl keyword general:layout dwindle
-    echo "dwindle" > "$STATE_FILE"
-    notify-send -i "$HOME/.config/Script/icons/layout.png" " Layout Changed" "Switched to Dwindle Tiling Layout"
+    # set scrolling layout; 'scrolling' is the common keyword for hyprland-plugins hyprscrolling
+    hyprctl keyword general:layout "scrolling"
+    echo "scrolling" > "$STATE_FILE"
+    notify-send -i "$HOME/.config/Script/icons/layout.png" "Layout Changed" "Switched to Scrolling layout"
 fi
 
+# optional: print detected + new layout to stdout for debugging when run manually
+echo "detected: $current_layout  -> toggled"
