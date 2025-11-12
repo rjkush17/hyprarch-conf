@@ -1,5 +1,7 @@
 return {
     "yetone/avante.nvim",
+      enabled = false, -- ✅ disables without uninstalling other plugins
+      cmd = { "AvanteAsk", "AvanteChat", "AvanteEdit", "AvanteToggle" },
     event = "VeryLazy",
     -- version = "v0.0.24", -- never set to "*"
     opts = {

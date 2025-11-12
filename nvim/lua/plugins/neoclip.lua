@@ -14,9 +14,9 @@ return {
             require("flash").setup({
                 labels = "asdfghjklqwertyuiopzxcvbnm", -- Easy keys for jumping
                 modes = {
-                    search = { enabled = true }, -- `/` ke saath flash enable
-                    char = { enabled = true }, -- Sneak-like motion
-                    treesitter = { enabled = true }, -- Better syntax jumps
+                    search = { enabled = true },       -- `/` ke saath flash enable
+                    char = { enabled = true },         -- Sneak-like motion
+                    treesitter = { enabled = true },   -- Better syntax jumps
                 },
             })
         end,
@@ -31,7 +31,7 @@ return {
             vim.o.foldenable = true
 
             -- Hide fold level numbers in the fold column
-            vim.o.fillchars = "eob: ,fold: ,foldopen:,foldclose:"
+            vim.o.fillchars = "foldopen:,foldclose:"
             -- Setup ufo with Treesitter & LSP
             require("ufo").setup({
                 provider_selector = function(bufnr, filetype, buftype)
