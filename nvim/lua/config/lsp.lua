@@ -3,51 +3,51 @@
 ---------------------------------------------------------------
 -- 🔹 Common LSP Keymaps
 ---------------------------------------------------------------
--- vim.api.nvim_create_autocmd("LspAttach", {
---     callback = function(ev)
---         local opts = { buffer = ev.buf, silent = true }
---         -- 🧭 Navigation
---         vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)          -- Go to definition
---         vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)                -- Hover docs
---         -- ✍️ Editing
---         vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)      -- Rename symbol
---         vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts) -- Code actions (quick fix)
---     end,
--- })
+vim.api.nvim_create_autocmd("LspAttach", {
+    callback = function(ev)
+        local opts = { buffer = ev.buf, silent = true }
+        -- 🧭 Navigation
+        vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)          -- Go to definition
+        vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)                -- Hover docs
+        -- ✍️ Editing
+        vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)      -- Rename symbol
+        vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts) -- Code actions (quick fix)
+    end,
+})
 --
 -- ---------------------------------------------------------------
 -- -- 🌙 Lua (Neovim Config / Plugin Development)
 -- ---------------------------------------------------------------
--- vim.lsp.config["lua_ls"] = {
---     cmd = { "lua-language-server" },
---     filetypes = { "lua" },
---     root_markers = { { ".luarc.json", ".luarc.jsonc" }, ".git" },
---     settings = {
---         Lua = {
---             runtime = { version = "LuaJIT" },
---             diagnostics = { globals = { "vim" } },
---             workspace = { checkThirdParty = false },
---             telemetry = { enable = false },
---         },
---     },
--- }
+vim.lsp.config["lua_ls"] = {
+    cmd = { "lua-language-server" },
+    filetypes = { "lua" },
+    root_markers = { { ".luarc.json", ".luarc.jsonc" }, ".git" },
+    settings = {
+        Lua = {
+            runtime = { version = "LuaJIT" },
+            diagnostics = { globals = { "vim" } },
+            workspace = { checkThirdParty = false },
+            telemetry = { enable = false },
+        },
+    },
+}
 --
 -- ---------------------------------------------------------------
 -- -- ⚡ JavaScript / TypeScript / React (Frontend + Node)
 -- ---------------------------------------------------------------
--- vim.lsp.config["ts_ls"] = {
---     cmd = { "typescript-language-server", "--stdio" },
---     filetypes = {
---         "javascript", "javascriptreact",
---         "typescript", "typescriptreact",
---         "jsx", "tsx", "js", "ts",
---     },
---     root_markers = { "package.json", "tsconfig.json", ".git" },
---     settings = {
---         javascript = { suggest = { autoImports = true } },
---         typescript = { suggest = { autoImports = true } },
---     },
--- }
+vim.lsp.config["ts_ls"] = {
+    cmd = { "typescript-language-server", "--stdio" },
+    filetypes = {
+        "javascript", "javascriptreact",
+        "typescript", "typescriptreact",
+        "jsx", "tsx", "js", "ts",
+    },
+    root_markers = { "package.json", "tsconfig.json", ".git" },
+    settings = {
+        javascript = { suggest = { autoImports = true } },
+        typescript = { suggest = { autoImports = true } },
+    },
+}
 
 ---------------------------------------------------------------
 -- 🎨 HTML / CSS / JSON (Frontend basics)
