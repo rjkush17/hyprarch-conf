@@ -7,7 +7,7 @@ return {
       enabled = true,
       show_start = true,
       show_end = false,
-      highlight = { "IndentBlanklineContextChar" },
+      highlight = { "IblScope" },
     },
     exclude = {
       filetypes = { "help", "lazy", "alpha", "dashboard", "neo-tree", "Trouble", "mason" },

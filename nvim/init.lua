@@ -5,7 +5,7 @@
 -- Load plugin and custom configs
 require("config.lazy")
 require("config.keymaps")
-require("config.lsp")
+-- require("config.lsp")
 
 -- Ensure 'vim' global is recognized by LSP
 ---@diagnostic disable-next-line: undefined-global
@@ -59,3 +59,38 @@ vim.diagnostic.config({
     underline = true, -- Underline problematic code
     update_in_insert = false, -- Don't update diagnostics while in insert mode
 })
+
+--------------------------------------------------------------------------------
+-- Some Config for the borders/UI
+--------------------------------------------------------------------------------
+vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#5c6370" }) -- thin color
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
+  vim.lsp.handlers.hover,
+  {
+    border = { "┌", "─", "┐", "│", "┘", "─", "└", "│" }
+  }
+)
+
+vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
+  vim.lsp.handlers.signature_help,
+  {
+    border = { "┌", "─", "┐", "│", "┘", "─", "└", "│" }
+  }
+)
+
+require("telescope").setup({
+  defaults = {
+    borderchars = {
+      prompt  = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+      results = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+      preview = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+    },
+  },
+})
+--------------------------------------------------------------------------------
+-- xxx End of the FIle xxx
+--------------------------------------------------------------------------------
+--# Diable mouse doe to hard learnign curve
+vim.opt.mouse = "a"
