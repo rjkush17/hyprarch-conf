@@ -199,7 +199,7 @@ map("n", "<leader>a", ":Telescope neoclip<CR>", { noremap = true, silent = true 
 --------------------------------------------------------------------------------
 
 -- Toggle NvimTree file explorer
-vim.keymap.set("n", "<leader>b", ":NvimTreeToggle<CR>", { desc = "Toggle NvimTree" })
+vim.keymap.set("n", "<leader>n", ":NvimTreeToggle<CR>", { desc = "Toggle NvimTree" })
 
 --------------------------------------------------------------------------------
 -- 🌐 Plugin: live.server.nvim
