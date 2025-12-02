@@ -1,4 +1,3 @@
--- ============================================================
 -- 🌙 Neovim Built-in LSP Configuration
 ---------------------------------------------------------------
 -- 🔹 Common LSP Keymaps
@@ -49,6 +48,30 @@ vim.lsp.config["ts_ls"] = {
     },
 }
 
+-- ---------------------------------------------------------------
+-- -- ⚡ Rust
+-- ---------------------------------------------------------------
+vim.lsp.config["rust_analyzer"] = {
+    cmd = { "rust-analyzer" }, -- mason installs this
+    filetypes = { "rust" },
+    root_markers = { "Cargo.toml", "rust-project.json", ".git" },
+
+    settings = {
+        ["rust-analyzer"] = {
+            cargo = {
+                allFeatures = true,
+            },
+            checkOnSave = {
+                command = "clippy", -- same as eslint auto check
+            },
+            completion = {
+                autoimport = {
+                    enable = true,
+                },
+            },
+        },
+    },
+}
 ---------------------------------------------------------------
 -- 🎨 HTML / CSS / JSON (Frontend basics)
 ---------------------------------------------------------------

@@ -3,7 +3,7 @@ return {
     config = function()
         require("auto-save").setup({
             execution_message = {
-                enabled = false,
+                enabled = true,
                 message = function() -- Custom message on save
                     return "󰄳 File saved successfully!"
                 end,

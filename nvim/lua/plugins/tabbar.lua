@@ -50,17 +50,17 @@ return {
     -- your keymaps (all inside keys table)
     keys = {
         {
-            "<leader>bb",
+            "<TAB>",
             function() require("snipe").open_buffer_menu() end,
             desc = "Quick Switch Buffer", -- comment
         },
         {
-            "<leader>br",
+            "<C-TAB>",
             function() require("snipe").open_file_menu() end,
             desc = "Recent Files", -- comment
         },
         {
-            "<leader>bn",
+            "<leader>bb",
             function() require("snipe").open_buffer_menu({ sort = "name" }) end,
             desc = "Buffers (A-Z)", -- comment
         },
