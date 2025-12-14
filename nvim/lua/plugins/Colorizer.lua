@@ -9,7 +9,7 @@ return {
       desc = "Color pick under cursor",
     },
   },
-  ---@type oklch.Opts
+  --@type oklch.Opts
   opts = {
     highlight = {
       enabled = true,

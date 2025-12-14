@@ -1,4 +1,4 @@
-# ==========================================================
+
 # HyprArch Zsh Shell File ||  ~/.config/zsh/.zshrc 
 # ==========================================================
 
@@ -134,7 +134,7 @@ fp() {
   local proj
   proj=$(find ~/Projects -mindepth 1 -maxdepth 1 -type d -printf "%f\n" | fzf --height=40% --reverse --border) || return
   cd "$HOME/Projects/$proj" || return
-  nvim .
+  nvim
 }
 
 flc() {
@@ -155,6 +155,8 @@ export NODE_ENV=development
 # Ruby on Rails environment
 export RAILS_ENV=development
 
+. "$HOME/.cargo/env"
+
 # ----------------------------------------------------------
 # Bun.js code
 # ----------------------------------------------------------
@@ -171,3 +173,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # ==========================================================
 #              --- xxx END OF THE FILE xxx ---
 # ==========================================================
+# 
+export TERM=xterm-256color
+export LS_COLORS='di=34:ln=36:so=35:pi=33:ex=32:bd=34;46:cd=34;43:su=37;41:sg=30;43:tw=30;42:ow=34;42:st=37;44:'
+

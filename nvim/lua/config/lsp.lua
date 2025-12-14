@@ -34,7 +34,7 @@ vim.lsp.config["lua_ls"] = {
 -- ---------------------------------------------------------------
 -- -- ⚡ JavaScript / TypeScript / React (Frontend + Node)
 -- ---------------------------------------------------------------
-vim.lsp.config["ts_ls"] = {
+vim.lsp.config["vtsls"] = {
     cmd = { "typescript-language-server", "--stdio" },
     filetypes = {
         "javascript", "javascriptreact",

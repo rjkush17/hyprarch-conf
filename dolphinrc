@@ -12,6 +12,10 @@ ViewFont=Adwaita Mono,14,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 [DetailsMode]
 PreviewSize=32
 
+[ExtractDialog]
+1920x1080 screen: Window-Maximized=true
+DirHistory[$e]=$HOME/Downloads/
+
 [General]
 AutoExpandFolders=true
 CloseActiveSplitView=false
@@ -23,12 +27,12 @@ ShowStatusBar=FullWidth
 SingleClick=false
 TerminalApplication=kitty
 Version=202
-ViewPropsTimestamp=2025,9,16,9,20,30.963
+ViewPropsTimestamp=2025,12,14,21,32,13.556000000000001
 
 [IconsMode]
 IconSize=48
 MaximumTextLines=2
-PreviewSize=80
+PreviewSize=144
 
 [InformationPanel]
 dateFormat=ShortFormat

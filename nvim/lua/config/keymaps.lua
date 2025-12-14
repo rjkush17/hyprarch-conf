@@ -6,7 +6,6 @@
 -- Ensure 'vim' global is recognized by LSP
 ---@diagnostic disable-next-line: undefined-global
 local vim = vim
-
 -- Short alias for setting keymaps
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
@@ -17,12 +16,12 @@ local opts = { noremap = true, silent = true }
 
 -- Insert a new line BELOW and stay in insert mode
 map("i", "<C-o>", function()
-  return vim.api.nvim_replace_termcodes("<Esc>o", true, false, true)
+    return vim.api.nvim_replace_termcodes("<Esc>o", true, false, true)
 end, { expr = true, desc = "Insert new line below" }) -- stays in insert mode
 
 -- Insert a new line ABOVE and stay in insert mode
 map("i", "<C-O>", function()
-  return vim.api.nvim_replace_termcodes("<Esc>O", true, false, true)
+    return vim.api.nvim_replace_termcodes("<Esc>O", true, false, true)
 end, { expr = true, desc = "Insert new line above" }) -- stays in insert mode
 
 -- ✏️ Move Cursor in Insert Mode (using Ctrl + h/j/k/l)
@@ -32,36 +31,24 @@ map("i", "<C-k>", "<Up>", opts)    -- Move cursor up
 map("i", "<C-l>", "<Right>", opts) -- Move cursor right
 
 -- 🌍 Basic LSP
-map("n", "gd", vim.lsp.buf.definition, opts)                -- go to definition
-map("n", "gD", vim.lsp.buf.declaration, opts)               -- go to declaration
-map("n", "gi", vim.lsp.buf.implementation, opts)            -- go to implementation
-map("n", "gr", vim.lsp.buf.references, opts)                -- show references
-map("n", "K", vim.lsp.buf.hover, opts)                      -- hover documentation
-map("n", "<leader>rn", vim.lsp.buf.rename, opts)            -- rename symbol
-map("n", "<leader>ca", vim.lsp.buf.code_action, opts)       -- code actions
+map("n", "gd", vim.lsp.buf.definition, opts)          -- go to definition
+map("n", "gD", vim.lsp.buf.declaration, opts)         -- go to declaration
+map("n", "gi", vim.lsp.buf.implementation, opts)      -- go to implementation
+map("n", "gr", vim.lsp.buf.references, opts)          -- show references
+map("n", "K", vim.lsp.buf.hover, opts)                -- hover documentation
+map("n", "<leader>rn", vim.lsp.buf.rename, opts)      -- rename symbol
+map("n", "<leader>ca", vim.lsp.buf.code_action, opts) -- code actions
 
 -- 🧠 Manual format shortcut (no auto format)
 vim.keymap.set("n", "<leader>gf", function()
     vim.lsp.buf.format({ async = true })
 end, { desc = "Format code using LSP" })
 
--- Better diagnostic keys without overriding common controls
--- vim.keymap.set('n', '<leader>dn', vim.diagnostic.goto_next, { desc = 'Next diagnostic' })
--- vim.keymap.set('n', '<leader>dp', vim.diagnostic.goto_prev, { desc = 'Previous diagnostic' })
--- vim.keymap.set('n', '<leader>dd', function()
---     vim.diagnostic.setloclist()
--- end, { desc = 'Show all diagnostics' })
---
 --------------------------------------------------------------------------------
 -- 🧩 Plugin: todo-comments.nvim
 --------------------------------------------------------------------------------
 
 -- Jump to next TODO comment
-map("n", "<leader>tn", function()
-    require("todo-comments").jump_next()
-end, vim.tbl_extend("force", opts, { desc = "Next TODO comment" }))
-
--- Jump to previous TODO comment
 map("n", "<leader>tp", function()
     require("todo-comments").jump_prev()
 end, vim.tbl_extend("force", opts, { desc = "Previous TODO comment" }))
@@ -203,7 +190,7 @@ map("n", "<leader>a", ":Telescope neoclip<CR>", { noremap = true, silent = true 
 --------------------------------------------------------------------------------
 
 -- Toggle NvimTree file explorer
-vim.keymap.set("n", "<leader>n", ":NvimTreeToggle<CR>", { desc = "Toggle NvimTree" })
+vim.keymap.set("n", "bb", ":NvimTreeToggle<CR>", { desc = "Toggle NvimTree" })
 
 --------------------------------------------------------------------------------
 -- 🌐 Plugin: live.server.nvim

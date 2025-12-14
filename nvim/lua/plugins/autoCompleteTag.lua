@@ -39,13 +39,6 @@ return {
     end,
   },
   -- ~/.Plugin for emmet html code
-  {
-    'mattn/emmet-vim',
-    ft = { 'html', 'css', 'javascript', 'typescript', 'jsx', 'tsx', 'erb' }, -- Load for specific file types
-    config = function()
-      -- Optional: Set up any Emmet-specific configurations here
-      vim.g.user_emmet_leader_key = '<C-h>' -- Example: Change Emmet leader key
-    end,
-  },
+
 }
 
