@@ -17,7 +17,7 @@ return {
 				mixing_color = "Normal", -- Color to blend background with (or "None")
 			},
 			signs = {
-				diag = "󰞇 ",
+				diag = " ",
 			},
 			disabled_ft = {},
 			options = {

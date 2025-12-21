@@ -86,12 +86,11 @@ return {
         },
 
         hints = {
-            dictionary = "sadflewcmpghio", -- comment: keys used to tag buffers
+            dictionary = "1234567890", -- comment: keys used to tag buffers
             prefix_key = ".", -- comment
         },
 
-        navigate = {
-            leader = ",", -- comment: special leader inside the snipe popup
+        navigate = { leader = ",", -- comment: special leader inside the snipe popup
 
             -- leader actions
             leader_map = {
