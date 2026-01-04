@@ -10,18 +10,18 @@ return {
 		},
 		config = function()
 			require("mason").setup()
-			require("mason-lspconfig").setup({
-				ensure_installed = {
-					"ts_ls", -- TypeScript / JavaScript
-					"html",
-					"cssls",
-					"jsonls",
-					"bashls",
-					"emmet_ls",
-					"lua_ls",
-				},
-				automatic_installation = true,
-			})
+			-- require("mason-lspconfig").setup({
+			-- 	ensure_installed = {
+			-- 		"ts_ls", -- TypeScript / JavaScript
+			-- 		"html",
+			-- 		"cssls",
+			-- 		"jsonls",
+			-- 		"bashls",
+			-- 		"emmet_ls",
+			-- 		"lua_ls",
+			-- 	},
+			-- 	automatic_installation = true,
+			-- })
 
 			require("mason-tool-installer").setup({
 				ensure_installed = {

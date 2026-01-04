@@ -4,7 +4,7 @@
 -- Load plugin and custom configs
 require("config.lazy")
 require("config.keymaps")
--- require("config.lsp")
+require("config.lsp")
 
 -- Ensure 'vim' global is recognized by LSP
 ---@diagnostic disable-next-line: undefined-global

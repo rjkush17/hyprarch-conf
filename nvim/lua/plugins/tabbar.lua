@@ -45,71 +45,136 @@
 --     },
 -- }
 return {
-    "leath-dub/snipe.nvim",
+	{
+		"leath-dub/snipe.nvim",
+		enabled = false,
+		keys = {
+			{
+				"<TAB>",
+				function()
+					require("snipe").open_buffer_menu()
+				end,
+				desc = "Quick Switch Buffer",
+			},
+			{
+				"<C-TAB>",
+				function()
+					require("snipe").open_file_menu()
+				end,
+				desc = "Recent Files",
+			},
+			{
+				"<leader>bb",
+				function()
+					require("snipe").open_buffer_menu({ sort = "name" })
+				end,
+				desc = "Buffers (A-Z)",
+			},
+		},
+		opts = {
+			ui = {
+				max_height = -1,
+				position = "center",
+				open_win_override = {
+					border = "single",
+				},
+				preselect_current = true,
+				preselect = nil,
+				text_align = "left",
+				persist_tags = true,
+			},
+			hints = {
+				dictionary = "1234567890",
+				prefix_key = ".",
+			},
+			navigate = {
+				leader = ",",
+				leader_map = {
+					["d"] = function(m, i)
+						require("snipe").close_buf(m, i)
+					end,
+					["v"] = function(m, i)
+						require("snipe").open_vsplit(m, i)
+					end,
+					["h"] = function(m, i)
+						require("snipe").open_split(m, i)
+					end,
+				},
+				next_page = "J",
+				prev_page = "K",
+				under_cursor = "<cr>",
+				cancel_snipe = "<esc>",
+				close_buffer = "D",
+				open_vsplit = "V",
+				open_split = "H",
+			},
+			sort = "default",
+		},
+	},
 
-    -- your keymaps (all inside keys table)
-    keys = {
-        {
-            "<TAB>",
-            function() require("snipe").open_buffer_menu() end,
-            desc = "Quick Switch Buffer", -- comment
-        },
-        {
-            "<C-TAB>",
-            function() require("snipe").open_file_menu() end,
-            desc = "Recent Files", -- comment
-        },
-        {
-            "<leader>bb",
-            function() require("snipe").open_buffer_menu({ sort = "name" }) end,
-            desc = "Buffers (A-Z)", -- comment
-        },
-    },
-
-    -- plugin options
-    opts = {
-        ui = {
-            max_height = -1, -- comment: dynamic height
-            position = "center", -- comment: window position
-
-            -- window styling
-            open_win_override = {
-                border = "single", -- comment: change to "rounded" if you want rounded border
-            },
-
-            preselect_current = true, -- comment
-            preselect = nil, -- comment
-
-            text_align = "left", -- comment
-
-            persist_tags = true, -- comment
-        },
-
-        hints = {
-            dictionary = "1234567890", -- comment: keys used to tag buffers
-            prefix_key = ".", -- comment
-        },
-
-        navigate = { leader = ",", -- comment: special leader inside the snipe popup
-
-            -- leader actions
-            leader_map = {
-                ["d"] = function(m, i) require("snipe").close_buf(m, i) end, -- comment: delete
-                ["v"] = function(m, i) require("snipe").open_vsplit(m, i) end, -- comment: vsplit
-                ["h"] = function(m, i) require("snipe").open_split(m, i) end, -- comment: split
-            },
-
-            next_page = "J", -- comment
-            prev_page = "K", -- comment
-
-            under_cursor = "<cr>", -- comment: open buffer
-            cancel_snipe = "<esc>", -- comment
-
-            close_buffer = "D", -- comment: close buffer under cursor
-            open_vsplit = "V", -- comment
-            open_split = "H", -- comment
-        },
-
-        sort = "default", -- comment: default sorting
-    },
+	{
+		"mistweaverco/bafa.nvim",
+		pin = true,
+		config = function()
+			require("bafa").setup({
+				notify = {
+					provider = "vim.notify",
+				},
+				ui = {
+					jump_labels = {
+						keys = {
+							"1",
+							"2",
+							"3",
+							"4",
+							"5",
+							"6",
+							"7",
+							"8",
+							"9",
+							"0",
+							"11",
+							"12",
+							"13",
+							"14",
+							"15",
+							"16",
+							",",
+							".",
+						},
+					},
+					diagnostics = true,
+					line_numbers = false,
+					title = {
+						text = " Buffers",
+						pos = "center",
+					},
+					border = "rounded",
+					style = "minimal",
+					position = {
+						preset = "center",
+						row = nil,
+						col = nil,
+					},
+					icons = {
+						diagnostics = {
+							Error = " ",
+							Warn = " ",
+							Info = "󰛨 ",
+							Hint = "",
+						},
+						sign = {
+							changes = "┃",
+						},
+					},
+					hl = {
+						sign = {
+							modified = "GitSignsChange",
+							deleted = "GitSignsDelete",
+						},
+					},
+				},
+			})
+		end,
+	},
 }
