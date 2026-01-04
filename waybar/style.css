@@ -1,39 +1,42 @@
-@import url("../../.cache/wal/colors-waybar.css");
+@import "colors.css";
 
 * {
-  /* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
-  font-family:
-    "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  padding: 0;
-  margin: 0;
-  font-weight: bolder;
-  min-height: 5px;
+    /* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
+    font-family:
+        "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    font-weight: bolder;
+    min-height: 5px;
 }
 
 window#waybar {
-  background: rgba(26, 27, 38, 0);
-  color: @color2;
-  padding: 0px;
-  margin: 0px;
-  font-family:
-    SpaceMono Nerd Font,
-    feather;
+    background: rgba(26, 27, 38, 0);
+    color: @primary;
+    padding: 0px;
+    margin: 0px;
+    font-family:
+        SpaceMono Nerd Font,
+        feather;
 }
 
 .modules-left {
-  margin-left: 0px;
-  padding: 2px;
+    margin-left: 0px;
+    padding: 2px;
 }
+
 .modules-middle {
-  margin-left: 0;
-  margin-right: 0;
-  padding: 2px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 2px;
 }
+
 .modules-right {
-  margin-right: 0px;
-  padding: 2px;
+    margin-right: 0px;
+    padding: 2px;
 }
+
 #clock,
 #battery,
 #cpu,
@@ -57,14 +60,14 @@ window#waybar {
 #custom-clip,
 #taskbar button,
 #mpd {
-  padding: 0 7px;
-  border-radius: 5px;
-  border: @color2 solid 0px;
-  background: rgba(0, 0, 0, 0.7);
-  color: @color2;
-  margin: 0px 2px 0px 2px;
-  font-weight: bold;
-  min-width: 15px;
+    padding: 0 7px;
+    border-radius: 5px;
+    border: @source_color solid 0px;
+    background: @background;
+    color: @primary;
+    margin: 0px 2px 0px 2px;
+    font-weight: bold;
+    min-width: 15px;
 }
 
 #clock:hover,
@@ -90,116 +93,124 @@ window#waybar {
 #custom-clip:hover,
 #taskbar button,
 #mpd:hover {
-  color: @color2;
-  background: @background;
+    color: @on_primary;
+    background: @surface_container;
 }
 
 #workspaces {
-  background: rgba(0, 0, 8, 0.7);
-  font-family:
-    SpaceMono Nerd Font,
-    feather;
-  font-weight: 900;
-  margin: 5px 2px;
-  padding: 0px 0px;
-  font-size: 16px;
-  color: #c0caf5;
-  border: none;
-  border-radius: 5px;
-  border: @color2 solid 0px;
+    background: rgba(0, 0, 8, 0.7);
+    font-family:
+        SpaceMono Nerd Font,
+        feather;
+    font-weight: 900;
+    margin: 5px 2px;
+    padding: 0px 0px;
+    font-size: 16px;
+    color: #c0caf5;
+    border: none;
+    border-radius: 5px;
+    border: @primary solid 0px;
 }
 
 #taskbar {
-  background: rgba(0, 0, 8, 0.7);
-  font-family:
-    SpaceMono Nerd Font,
-    feather;
-  font-weight: 900;
-  margin: 5px 2px;
-  padding: 0px 0px;
-  font-size: 12px;
-  border: none;
-  border-radius: 5px;
+    background: rgba(0, 0, 8, 0.7);
+    font-family:
+        SpaceMono Nerd Font,
+        feather;
+    font-weight: 900;
+    margin: 5px 2px;
+    padding: 0px 0px;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
 }
 
 #taskbar button {
-  background: rgba(0, 0, 8, 0);
-  font-family:
-    SpaceMono Nerd Font,
-    feather;
-  font-weight: 900;
-  margin: 5px 0px;
-  padding: 0px 3px;
-  font-size: 16px;
-  color: #c0caf5;
-  border: none;
+    background: rgba(0, 0, 8, 0);
+    font-family:
+        SpaceMono Nerd Font,
+        feather;
+    font-weight: 900;
+    margin: 5px 0px;
+    padding: 0px 3px;
+    font-size: 16px;
+    color: #c0caf5;
+    border: none;
 }
 
 #workspaces button {
-  padding: 0px 5px;
-  border-radius: 5px;
+    padding: 0px 5px;
+    border-radius: 5px;
 }
 
 #workspaces button.active {
-  background: @color2;
-  color: @background;
-  border-radius: 5px;
-  border-radius: 5px;
-  transition: all 0.4s ease-out 0.4s;
+    background: @primary;
+    color: @surface_container;
+    border-radius: 5px;
+    border-radius: 5px;
+    transition: all 0.4s ease-out 0.4s;
 }
 
 #workspaces button:hover {
-  background: #11111b;
-  color: #cdd6f4;
-  box-shadow: none;
+    background: #11111b;
+    color: #cdd6f4;
+    box-shadow: none;
 }
 
 #custom-arch {
-  font-size: 20px;
-  padding: 0px 13px 0px 10px;
-  transition: color 0.5s;
+    font-size: 20px;
+    padding: 0px 13px 0px 10px;
+    transition: color 0.5s;
 }
+
 #custom-arch:hover {
-  background: black;
-  color: #1793d1;
+    background: black;
+    color: #1793d1;
 }
 
 #bluetooth {
-  font-size: 20px;
-  padding: 2px 0px;
+    font-size: 20px;
+    padding: 2px 0px;
 }
+
 #custom-wlogout {
-  font-size: 25px;
-  padding: 0px 10px;
+    font-size: 25px;
+    padding: 0px 10px;
 }
+
 #tray {
-  color: @color2;
-  background: @background;
+    color: @primary;
+    background: @surface_container;
 }
+
 #custom-arch,
 #custom-clip {
-  font-size: 20px;
-  padding: 5px 9px 5px 9px;
+    font-size: 20px;
+    padding: 5px 9px 5px 9px;
 }
-#tray menu{
-    background-color: @background;
+
+#tray menu {
+    background-color: @surface_container;
     border-radius: 8px;
     padding: 5px;
-    color: @color2;
+    color: @primary;
 }
 
 #tray menu menuitem {
-  padding: 5px 10px;
-  font-weight: normal;  
+    padding: 5px 10px;
+    font-weight: normal;
 }
+
 #tray menu separator {
-    min-height: 1px;      /* thickness */
-    background-color: @color2; /* line color */
-    margin: 4px 6px;       /* spacing around separator */
+    min-height: 1px;
+    /* thickness */
+    background-color: @primary;
+    /* line color */
+    margin: 4px 6px;
+    /* spacing around separator */
 }
 
 #tray menu menuitem:hover {
-    background-color: @color2;
-    color: @background;
+    background-color: @primary;
+    color: @surface_container;
 }
-

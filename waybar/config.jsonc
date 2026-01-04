@@ -11,7 +11,7 @@
         "battery",
         "cpu",
         "memory",
-        "temperature",
+        "temperature"
     ],
     "modules-center": [
         "hyprland/workspaces",
@@ -25,11 +25,9 @@
         "bluetooth",
         "battery#bat2",
         "custom/wlogout",
-        "custom/arch"
     ],
     //Modules configuration
-
     "include": [
-		"~/.config/waybar/modules.json"
-	]
+        "~/.config/waybar/modules.json"
+    ],
 }
