@@ -31,15 +31,18 @@ sleep 1.6
 # Generate Pywal colors silently
 wal -i "$WALLPAPER" -q
 
+# Generate Matugen color
+matugen image "$WALLPAPER"
+
 # Wait for wal to finish writing
 # sleep 0.5
 #
 # Restart Waybar
-if pgrep -x "waybar" > /dev/null; then
-    killall waybar
-    sleep 0.5
-fi
+# if pgrep -x "waybar" > /dev/null; then
+#    killall waybar
+#    sleep 0.5
+# fi
 
-waybar &
+# waybar &
 # Update Dunst colors
 ~/.config/Script/update_dunst_colors.sh
