@@ -1,85 +1,97 @@
 add_newline = true
 
 format = """
-╭─ $os$username$hostname$directory$fill$jobs$cmd_duration$rust$nodejs$shell
+╭─ $os$username$hostname$directory$fill$jobs$cmd_duration$rust$nodejs$shell
 ╰─$character
 """
 
-# ---------------- OS ----------------
+# ==================== OS ====================
 [os]
 format = "[$symbol ]($style)"
-style = "bold blue"
+style = "bold blue"          # primary accent
 disabled = false
 
 [os.symbols]
 Arch = ""
 
-# ---------------- USER / HOST ----------------
+# ==================== USER / HOST ====================
 [username]
 format = "[$user]($style)"
-style_user = "bold purple"
+style_user = "bold green"    # identity / success
 show_always = true
 
 [hostname]
 format = "[|>$hostname ]($style)"
-style = "bold purple"
+style = "dimmed green"       # secondary identity
 ssh_only = false
 
-# ---------------- DIRECTORY ----------------
+# ==================== DIRECTORY ====================
 [directory]
-format = "[ $path ]($style)"
-style = "bold blue"
+format = "[  $path ]($style)"
+style = "bold blue"          # navigation focus
 truncation_length = 4
 truncation_symbol = "…/"
 truncate_to_repo = false
 
-# ---------------- FILL (push right side) ----------------
+# ==================== GIT ====================
+[git_branch]
+symbol = " "
+format = "[$symbol$branch]($style) "
+style = "bold cyan"          # active context
+
+[git_status]
+format = '([$all_status$ahead_behind]($style) )'
+style = "yellow"             # warnings / changes
+
+# ==================== FILL ====================
 [fill]
 symbol = " "
 
-# ---------------- CMD DURATION ----------------
+# ==================== CMD DURATION ====================
 [cmd_duration]
 format = "[ $duration ]($style)"
-style = "bold green"
+style = "dimmed white"       # secondary info
 min_time = 1000
 
-# ---------------- LANG RUNTIMES (auto show) ----------------
+# ==================== LANG RUNTIMES ====================
 [rust]
 format = "[ $version ]($style)"
-style = "bold red"
+style = "bold red"           # strong, recognizable
 
 [nodejs]
 format = "[󰎙 $version ]($style)"
-style = "bold green"
+style = "bold green"         # healthy runtime
 
 [bun]
 symbol = "🥟 "
 format = "[$symbol]($style)"
+style = "bold yellow"
 
 [lua]
 symbol = "🌙 "
 format = "[$symbol]($style)"
+style = "bold blue"
 
-# ---------------- JOBS (auto show) ----------------
+# ==================== JOBS ====================
 [jobs]
 symbol = "󰆍 "
 format = "[$symbol$number]($style) "
-style = "bold magenta"
+style = "bold magenta"       # accent, noticeable
 
-# ---------------- Shell Icon ----------------
+# ==================== SHELL ====================
 [shell]
 disabled = false
-format = "[$indicator $shell ]($style)"
-style = "bold yellow"
+format = "[$indicator ]($style)"
+style = "dimmed white"       # neutral system info
 
 bash_indicator = " Bash"
-zsh_indicator  = " zsh"
-fish_indicator = "󰈺 "
-nu_indicator   = "󰄛 "
-powershell_indicator = "󰨊"
+zsh_indicator  = " Zsh"
+fish_indicator = "󰈺 Fish"
+nu_indicator   = "󰄛 Nu"
+powershell_indicator = "󰨊 PS"
 unknown_indicator = "?"
 
-# ---------------- PROMPT SYMBOL ----------------
+# ==================== PROMPT SYMBOL ====================
 [character]
-success_symbol = "[❯](bold green)"
-error_symbol = "[❯](bold red)"
+success_symbol = "[](bold green)"
+error_symbol   = "[✘](bold red)"
