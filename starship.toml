@@ -1,0 +1,85 @@
+add_newline = true
+
+format = """
+╭─ $os$username$hostname$directory$fill$jobs$cmd_duration$rust$nodejs$shell
+╰─$character
+"""
+
+# ---------------- OS ----------------
+[os]
+format = "[$symbol ]($style)"
+style = "bold blue"
+disabled = false
+
+[os.symbols]
+Arch = ""
+
+# ---------------- USER / HOST ----------------
+[username]
+format = "[$user]($style)"
+style_user = "bold purple"
+show_always = true
+
+[hostname]
+format = "[|>$hostname ]($style)"
+style = "bold purple"
+ssh_only = false
+
+# ---------------- DIRECTORY ----------------
+[directory]
+format = "[ $path ]($style)"
+style = "bold blue"
+truncation_length = 4
+truncation_symbol = "…/"
+truncate_to_repo = false
+
+# ---------------- FILL (push right side) ----------------
+[fill]
+symbol = " "
+
+# ---------------- CMD DURATION ----------------
+[cmd_duration]
+format = "[ $duration ]($style)"
+style = "bold green"
+min_time = 1000
+
+# ---------------- LANG RUNTIMES (auto show) ----------------
+[rust]
+format = "[ $version ]($style)"
+style = "bold red"
+
+[nodejs]
+format = "[󰎙 $version ]($style)"
+style = "bold green"
+
+[bun]
+symbol = "🥟 "
+format = "[$symbol]($style)"
+
+[lua]
+symbol = "🌙 "
+format = "[$symbol]($style)"
+
+# ---------------- JOBS (auto show) ----------------
+[jobs]
+symbol = "󰆍 "
+format = "[$symbol$number]($style) "
+style = "bold magenta"
+
+# ---------------- Shell Icon ----------------
+[shell]
+disabled = false
+format = "[$indicator $shell ]($style)"
+style = "bold yellow"
+
+bash_indicator = " Bash"
+zsh_indicator  = " zsh"
+fish_indicator = "󰈺 "
+nu_indicator   = "󰄛 "
+powershell_indicator = "󰨊"
+unknown_indicator = "?"
+
+# ---------------- PROMPT SYMBOL ----------------
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
