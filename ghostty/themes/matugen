@@ -1,0 +1,34 @@
+# ==================================================
+# Ghostty — Matugen Palette (mapped 1:1)
+# ==================================================
+
+# =====================
+# ANSI Palette
+# =====================
+
+palette = 0=#8b9198
+palette = 1=#ffb4ab
+palette = 2=#97ccf8
+palette = 3=#b8c8d9
+palette = 4=#d0c0e8
+palette = 5=#004b71
+palette = 6=#394956
+palette = 7=#c1c7ce
+
+palette = 8=#41474d
+palette = 9=#93000a
+palette = 10=#cbe6ff
+palette = 11=#394956
+palette = 12=#4d4162
+palette = 13=#97ccf8
+palette = 14=#d3e4f6
+palette = 15=#e0e3e8
+
+background = #101417
+foreground = #e0e3e8
+
+cursor-color = #97ccf8
+cursor-text = #e0e3e8
+
+selection-background = #41474d
+selection-foreground = #e0e3e8

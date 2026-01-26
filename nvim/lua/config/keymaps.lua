@@ -48,9 +48,14 @@ end, { desc = "Format code using LSP" })
 -- 🧩 Plugin: bafa.nvim
 --------------------------------------------------------------------------------
 
+-- vim.keymap.set("n", "<Tab>", function()
+--   require("bafa.ui").toggle({ with_jump_labels = true })
+-- end, { desc = "Bafa buffer panel" })
+
 vim.keymap.set("n", "<Tab>", function()
-  require("bafa.ui").toggle({ with_jump_labels = true })
-end, { desc = "Bafa buffer panel" })
+  require("snipe").open_file_menu()
+end, { desc = "Snipe: File Menu" })
+
 
 --------------------------------------------------------------------------------
 -- 🧩 Plugin: todo-comments.nvim
@@ -198,7 +203,7 @@ map("n", "<leader>a", ":Telescope neoclip<CR>", { noremap = true, silent = true 
 --------------------------------------------------------------------------------
 
 -- Toggle NvimTree file explorer
-vim.keymap.set("n", "bb", ":NvimTreeToggle<CR>", { desc = "Toggle NvimTree" })
+vim.keymap.set("n", "<leader>bb", ":NvimTreeToggle<CR>", { desc = "Toggle NvimTree" })
 
 --------------------------------------------------------------------------------
 -- 🌐 Plugin: live.server.nvim

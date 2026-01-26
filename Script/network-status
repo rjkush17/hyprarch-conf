@@ -3,11 +3,11 @@
 interface=$(ip route | grep '^default' | awk '{print $5}' | head -n 1)
 
 if [ -z "$interface" ]; then
-    echo " 󰖪 Disconnected"
+    echo " 󰖪 "
 else
     ssid=$(iwgetid -r)
     if [ -z "$ssid" ]; then
-        echo " 󰖩  $ssid "
+        echo "󱚽     ."
     else
         echo "󰖩  $ssid"
     fi

@@ -29,7 +29,7 @@ vim.cmd [[highlight CursorLineNr guifg=#61afef gui=None]] -- Highlight line numb
 -- 🖼️ Auto Open Images in Default Viewer
 --------------------------------------------------------------------------------
 
--- Automatically open images in gthumb when entering their buffer
+-- Automatically open images in default images viwer when entering their buffer
 vim.api.nvim_create_autocmd("BufEnter", {
     pattern = { "*.png", "*.jpg", "*.jpeg", "*.gif", "*.webp" },
     callback = function()
@@ -43,3 +43,5 @@ vim.api.nvim_create_autocmd("BufEnter", {
         end, 10)
     end,
 })
+
+

@@ -54,6 +54,29 @@ vim.lsp.config["vtsls"] = {
 	},
 }
 
+
+-- ---------------------------------------------------------------
+-- ⚡ QML / QuickShell (QtQuick)
+-- ---------------------------------------------------------------
+vim.lsp.config["qmlls"] = {
+	cmd = { "qmlls" },
+	filetypes = {
+		"qml",
+		"qmljs",
+	},
+	root_markers = { ".git", "CMakeLists.txt", "qmldir" },
+	settings = {
+		qml = {
+			format = {
+				enable = true,
+			},
+			completion = {
+				enable = true,
+			},
+		},
+	},
+}
+
 -- ---------------------------------------------------------------
 -- -- ⚡ Rust
 -- ---------------------------------------------------------------
@@ -161,7 +184,7 @@ vim.lsp.enable({
 	"lua_ls", -- Lua
 	"ts_ls", -- JS / TS / React
 	"html", -- HTML
-	"cssls", -- CSS / SCSS
+	-- "cssls", -- CSS / SCSS
 	"jsonls", -- JSON
 	"tailwindcss", -- Tailwind CSS
 	"eslint", -- ESLint

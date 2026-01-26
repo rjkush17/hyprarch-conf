@@ -136,7 +136,7 @@ fp() {
   local proj
   proj=$(find ~/Projects -mindepth 1 -maxdepth 1 -type d -printf "%f\n" | fzf --height=40% --reverse --border) || return
   cd "$HOME/Projects/$proj" || return
-  nvim
+  nvim .
 }
 
 flc() {

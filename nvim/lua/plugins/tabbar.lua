@@ -47,13 +47,14 @@
 return {
 	{
 		"leath-dub/snipe.nvim",
-		enabled = false,
+	--	enabled = false,
 		keys = {
 			{
 				"<TAB>",
 				function()
 					require("snipe").open_buffer_menu()
 				end,
+                mode = "n",
 				desc = "Quick Switch Buffer",
 			},
 			{
@@ -82,10 +83,7 @@ return {
 				preselect = nil,
 				text_align = "left",
 				persist_tags = true,
-			},
-			hints = {
-				dictionary = "1234567890",
-				prefix_key = ".",
+			}, hints = { dictionary = "1234567890", prefix_key = ".",
 			},
 			navigate = {
 				leader = ",",
@@ -114,6 +112,7 @@ return {
 
 	{
 		"mistweaverco/bafa.nvim",
+        enabled = false,
 		pin = true,
 		config = function()
 			require("bafa").setup({

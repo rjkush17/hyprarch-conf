@@ -1,0 +1,79 @@
+# ==================================================
+# Ghostty — Matugen Color Template
+# File: ~/.config/matugen/templates/ghostty.conf
+# Output: ~/.config/ghostty/colors.conf
+# ==================================================
+
+# =====================
+# ANSI Colors (Normal)
+# =====================
+
+# Black — UI dividers / shadows
+color0  #a08c8b
+
+# Red — errors / danger
+color1  #ffb4ab
+
+# Green — success / ok
+color2  #ffb3b1
+
+# Yellow — warnings / hints
+color3  #e6bdbb
+
+# Blue — info / links
+color4  #e3c28d
+
+# Magenta — accents
+color5  #733333
+
+# Cyan — secondary info
+color6  #5d3f3e
+
+# White — normal text
+color7  #d7c1c0
+
+# =====================
+# ANSI Colors (Bright)
+# =====================
+
+# Bright Black
+color8   #524342
+
+# Bright Red
+color9   #93000a
+
+# Bright Green
+color10  #ffdad8
+
+# Bright Yellow
+color11  #5d3f3e
+
+# Bright Blue
+color12  #5a4319
+
+# Bright Magenta
+color13  #ffb3b1
+
+# Bright Cyan
+color14  #ffdad8
+
+# Bright White
+color15  #f0dedd
+
+# =====================
+# Core UI Colors
+# =====================
+
+background  #1a1111
+foreground  #f0dedd
+cursor-color #ffb3b1
+selection-background #733333
+selection-foreground #ffdad8
+
+# =====================
+# Borders / Bells
+# =====================
+
+active-border-color    #ffb3b1
+inactive-border-color  #524342
+bell-border-color      #ffb4ab
