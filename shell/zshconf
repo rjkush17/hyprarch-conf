@@ -101,6 +101,8 @@ alias tl='tmux ls'            # list sessions
 alias tk='tmux kill-session -t' # kill a session
 # Its open tmux with the nvim open
 alias tn='tmux new-session "nvim ."'
+# for compile and run single typecript file
+alias tsrun='npx ts-node --compiler-options "{\"module\":\"CommonJS\"}"'
 
 # ----------------------------------------------------------
 # Ruby and rbenv shell Environment

@@ -12,30 +12,16 @@ ViewFont=Adwaita Mono,14,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 [DetailsMode]
 PreviewSize=32
 
-[ExtractDialog]
-1920x1080 screen: Window-Maximized=true
-DirHistory[$e]=$HOME/Downloads/
-
 [General]
-AutoExpandFolders=true
-CloseActiveSplitView=false
-GlobalViewProps=false
-OpenExternallyCalledFolderInNewTab=true
-ShowFullPath=true
-ShowFullPathInTitlebar=true
-ShowStatusBar=FullWidth
+ModifiedStartupSettings=false
 SingleClick=false
 TerminalApplication=kitty
 Version=202
-ViewPropsTimestamp=2025,12,14,21,32,13.556000000000001
+ViewPropsTimestamp=2025,9,16,9,20,30.963
 
 [IconsMode]
-IconSize=48
-MaximumTextLines=2
-PreviewSize=176
-
-[InformationPanel]
-dateFormat=ShortFormat
+PreviewSize=128
+TextWidthIndex=0
 
 [KFileDialog Settings]
 Places Icons Auto-resize=false
@@ -50,16 +36,11 @@ ToolButtonStyle=IconOnly
 [PlacesPanel]
 IconSize=32
 
-[PreviewSettings]
-Plugins=ffmpegthumbnailer,appimagethumbnail,audiothumbnail,avif,evince,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,heif,imagethumbnail,jpegthumbnail,jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,gsf-office,opendocumentthumbnail,gsthumbnail,rawthumbnail,librsvg,svgthumbnail,textthumbnail,ffmpegthumbs,gdk-pixbuf-thumbnailer
+[Search]
+Location=Everywhere
 
 [Toolbar mainToolBar]
 ToolButtonStyle=IconOnly
 
 [UiSettings]
 ColorScheme=Orchis-solidDark
-
-[ViewPropertiesDialog]
-1920x1080 screen: Height=437
-1920x1080 screen: Width=357
-1920x1080 screen: Window-Maximized=true

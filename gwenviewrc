@@ -1,0 +1,58 @@
+MenuBar=Disabled
+
+[Crop]
+CropRatioHeight=1
+CropRatioIndex=1
+CropRatioWidth=1
+
+[FullScreen]
+FullScreenBarHeight=100
+
+[General]
+BackgroundColorMode=DocumentView::Dark
+FullScreenBackground=FullScreenBackground::Image
+LastUsedVersion=210800
+SideBarPage=operations
+
+[ImageView]
+ThumbnailSplitterSizes=721,205
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=32
+
+[MainWindow]
+MenuBar=Disabled
+
+[MainWindow][Toolbar mainToolBar]
+ToolButtonStyle=IconOnly
+
+[Recent Files]
+File1[$e]=$HOME/Downloads/ChatGPT Image Jan 26, 2026, 05_02_44 PM.png
+File10[$e]=$HOME/Downloads/Fantastic Epic Wallpapers.jpg
+File2[$e]=$HOME/.cache/kioexec/krun/22174_0/aorus-guardians-of-the-galaxy-battle-wallpaper.jpg
+File3[$e]=$HOME/Documents/ai/Man and horse in serene landscape.png
+File4[$e]=$HOME/Wallpapers/hyprland/Wallpapers06.png
+File5[$e]=$HOME/Wallpapers/hyprland/Wallpapers09.jpg
+File6[$e]=trash:/0-Wallpapers06.png
+File7[$e]=$HOME/Screenshot
+File8[$e]=$HOME/Downloads/🔥 Wallpapers Minions on WallpaperSafari.jpg
+File9[$e]=$HOME/Downloads/sasas.jpg
+Name1[$e]=ChatGPT Image Jan 26, 2026, 05_02_44 PM.png
+Name10[$e]=Fantastic Epic Wallpapers.jpg
+Name2[$e]=aorus-guardians-of-the-galaxy-battle-wallpaper.jpg
+Name3[$e]=Man and horse in serene landscape.png
+Name4[$e]=Wallpapers06.png
+Name5[$e]=Wallpapers09.jpg
+Name6[$e]=0-Wallpapers06.png
+Name7[$e]=Screenshot
+Name8[$e]=🔥 Wallpapers Minions on WallpaperSafari.jpg
+Name9[$e]=sasas.jpg
+
+[SideBar]
+InformationSplitterSizes=220,255
+IsVisible ViewMode=true
+SideBarSplitterSizes=243,1660
+
+[UiSettings]
+ColorScheme=Orchis-solidDark

@@ -27,7 +27,7 @@ button {
 
 button:hover {
   outline-style: none;
-  background-color: @primary;
+  background-color: @on_primary;
   border: 3px solid @on_primary;
   padding: 50px;
   transition: all 0.3s cubic-bezier(0.55, 0, 0.28, 1.682);
