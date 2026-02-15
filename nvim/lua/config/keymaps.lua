@@ -52,9 +52,9 @@ end, { desc = "Format code using LSP" })
 --   require("bafa.ui").toggle({ with_jump_labels = true })
 -- end, { desc = "Bafa buffer panel" })
 
-vim.keymap.set("n", "<Tab>", function()
-  require("snipe").open_file_menu()
-end, { desc = "Snipe: File Menu" })
+-- vim.keymap.set("n", "<Tab>", function()
+--   require("snipe").open_file_menu()
+-- end, { desc = "Snipe: File Menu" })
 
 
 --------------------------------------------------------------------------------

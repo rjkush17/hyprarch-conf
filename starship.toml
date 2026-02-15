@@ -1,7 +1,7 @@
 add_newline = true
 
 format = """
- ╭─ $os$username$hostname$directory$fill$jobs$cmd_duration$rust$nodejs$shell 
+ ╭─ $os$username$hostname$directory$git_branch$fill$jobs$cmd_duration$rust$nodejs$shell 
  ╰─$character
 """
 
@@ -37,11 +37,7 @@ truncate_to_repo = false
 [git_branch]
 symbol = " "
 format = "[$symbol$branch]($style) "
-style = "bold cyan"          # active context
-
-[git_status]
-format = '([$all_status$ahead_behind]($style) )'
-style = "yellow"             # warnings / changes
+style = "bold cyan"
 
 # ==================== FILL ====================
 [fill]

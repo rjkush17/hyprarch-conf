@@ -155,11 +155,14 @@ flc() {
 # ----------------------------------------------------------
 
 # Node.js environment
-export NODE_ENV=development
+# export NODE_ENV=production
 # Ruby on Rails environment
 export RAILS_ENV=development
 # Some Carho env things
 . "$HOME/.cargo/env"
+# Editors for ENV
+export VISUAL=nvim
+export EDITOR=nvim
 
 # ----------------------------------------------------------
 # Bun.js code
@@ -173,6 +176,12 @@ export RAILS_ENV=development
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# ----------------------------------------------------------
+# Open AI Path for codex
+# ----------------------------------------------------------
+# opencode
+export PATH=/home/zatch/.opencode/bin:$PATH
 
 # ==========================================================
 #              --- xxx END OF THE FILE xxx ---

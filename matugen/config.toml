@@ -60,3 +60,5 @@ output_path = '~/.config/matugen/papirus-folders/folder-color.txt'
 [templates.qt6]
 input_path = '~/.config/matugen/templates/matugen.colors'
 output_path = '~/.local/share/color-schemes/matugen.colors'
+
+# allow_remote_control yes

@@ -1,5 +1,5 @@
 // Zed settings
-//
+//bb
 // For information on how to configure Zed, see the Zed
 // documentation: https://zed.dev/docs/configuring-zed
 //
@@ -7,6 +7,18 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "tabs": {
+    "file_icons": true
+  },
+  "title_bar": {
+    "show_branch_icon": true
+  },
+  "buffer_font_weight": 300.0,
+  "agent_buffer_font_size": 16.0,
+  "agent_ui_font_size": 15.0,
+  "ui_font_weight": 400.0,
+  "ui_font_family": "JetBrains Mono",
+  "buffer_font_family": "JetBrains Mono",
   "auto_signature_help": true,
   "features": {
     "edit_prediction_provider": "copilot"
@@ -22,12 +34,12 @@
     "light": "Zed (Default)",
     "dark": "Material Icon Theme"
   },
-  "vim_mode": true,
-  "ui_font_size": 16,
-  "buffer_font_size": 15,
+  "vim_mode": false,
+  "ui_font_size": 16.0,
+  "buffer_font_size": 15.0,
   "theme": {
     "mode": "dark",
     "light": "Ayu Light",
-    "dark": "Catppuccin Mocha"
+    "dark": "Ayu Dark"
   }
 }

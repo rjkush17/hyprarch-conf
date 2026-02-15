@@ -64,13 +64,13 @@ return {
 				end,
 				desc = "Recent Files",
 			},
-			{
-				"<leader>bb",
-				function()
-					require("snipe").open_buffer_menu({ sort = "name" })
-				end,
-				desc = "Buffers (A-Z)",
-			},
+			-- {
+			-- 	"<leader>bb",
+			-- 	function()
+			-- 		require("snipe").open_buffer_menu({ sort = "name" })
+			-- 	end,
+			-- 	desc = "Buffers (A-Z)",
+			-- },
 		},
 		opts = {
 			ui = {
