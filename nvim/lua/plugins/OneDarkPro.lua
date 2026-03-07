@@ -28,16 +28,17 @@ return {
 				},
 				options = {
 					transparency = true, -- Set true for transparent background
-					terminal_colors = true,
+					terminal_colors = false,
 				},
 			})
-			-- 	vim.cmd("colorscheme onedark")
+				vim.cmd("colorscheme onedark")
 		end,
 	},
 	-- lua/plugins/rose-pine.lua
 	{
 		"rose-pine/neovim",
 		name = "rose-pine",
+            enable = false,
 		lazy = false, -- load immediately
 		priority = 1000, -- load before other UI plugins
 		config = function()
@@ -128,7 +129,7 @@ return {
 				},
 			})
 
-			vim.cmd.colorscheme("rose-pine")
+			-- vim.cmd.colorscheme("rose-pine")
 		end,
 	},
 }

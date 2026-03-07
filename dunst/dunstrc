@@ -50,18 +50,18 @@ corner_radius = 5
 # -------------------------------
 [urgency_low]
 timeout = 3
-background = "#101417"
-foreground = "#e0e3e8"
-highlight  = "#004b71"
+background = "#121318"
+foreground = "#e3e2e9"
+highlight  = "#314578"
 
 # -------------------------------
 # Normal urgency
 # -------------------------------
 [urgency_normal]
 timeout = 6
-background = "#101417"
-foreground = "#e0e3e8"
-highlight  = "#004b71"
+background = "#121318"
+foreground = "#e3e2e9"
+highlight  = "#314578"
 
 [urgency_critical]
     background = "#ff0000"

@@ -28,31 +28,31 @@ MenuBar=Disabled
 ToolButtonStyle=IconOnly
 
 [Recent Files]
-File1[$e]=$HOME/Downloads/ChatGPT Image Jan 26, 2026, 05_02_44 PM.png
-File10[$e]=$HOME/Downloads/Fantastic Epic Wallpapers.jpg
-File2[$e]=$HOME/.cache/kioexec/krun/22174_0/aorus-guardians-of-the-galaxy-battle-wallpaper.jpg
-File3[$e]=$HOME/Documents/ai/Man and horse in serene landscape.png
-File4[$e]=$HOME/Wallpapers/hyprland/Wallpapers06.png
-File5[$e]=$HOME/Wallpapers/hyprland/Wallpapers09.jpg
-File6[$e]=trash:/0-Wallpapers06.png
-File7[$e]=$HOME/Screenshot
-File8[$e]=$HOME/Downloads/🔥 Wallpapers Minions on WallpaperSafari.jpg
-File9[$e]=$HOME/Downloads/sasas.jpg
-Name1[$e]=ChatGPT Image Jan 26, 2026, 05_02_44 PM.png
-Name10[$e]=Fantastic Epic Wallpapers.jpg
-Name2[$e]=aorus-guardians-of-the-galaxy-battle-wallpaper.jpg
-Name3[$e]=Man and horse in serene landscape.png
-Name4[$e]=Wallpapers06.png
-Name5[$e]=Wallpapers09.jpg
-Name6[$e]=0-Wallpapers06.png
-Name7[$e]=Screenshot
-Name8[$e]=🔥 Wallpapers Minions on WallpaperSafari.jpg
-Name9[$e]=sasas.jpg
+File1[$e]=$HOME/Wallpapers/WallBank/wallpapers/odysee.jpg
+File10[$e]=$HOME/AppImage/Affine/logo.png
+File2[$e]=$HOME/Wallpapers/WallBank/wallpapers/pastel-window.png
+File3[$e]=$HOME/Wallpapers/WallBank/wallpapers/pink-clouds.png
+File4[$e]=$HOME/Wallpapers/WallBank/wallpapers/pixelart_landscape.jpg
+File5[$e]=$HOME/Wallpapers/WallBank/wallpapers/plane_sunset.png
+File6[$e]=$HOME/Wallpapers/WallBank/wallpapers/rocket_launch.jpg
+File7[$e]=$HOME/Wallpapers/WallBank/wallpapers/rocky_land.jpg
+File8[$e]=$HOME/Wallpapers/hyprland/digital-art-isolated-house.jpg
+File9[$e]=$HOME/Wallpapers/hyprland.backup/cr-ai-tive-ai-generated-8331710_1920.png
+Name1[$e]=odysee.jpg
+Name10[$e]=logo.png
+Name2[$e]=pastel-window.png
+Name3[$e]=pink-clouds.png
+Name4[$e]=pixelart_landscape.jpg
+Name5[$e]=plane_sunset.png
+Name6[$e]=rocket_launch.jpg
+Name7[$e]=rocky_land.jpg
+Name8[$e]=digital-art-isolated-house.jpg
+Name9[$e]=cr-ai-tive-ai-generated-8331710_1920.png
 
 [SideBar]
 InformationSplitterSizes=220,255
 IsVisible ViewMode=true
-SideBarSplitterSizes=243,1660
+SideBarSplitterSizes=243,726
 
 [UiSettings]
-ColorScheme=Orchis-solidDark
+ColorScheme=OrchisDark

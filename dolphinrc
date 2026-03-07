@@ -20,7 +20,7 @@ Version=202
 ViewPropsTimestamp=2025,9,16,9,20,30.963
 
 [IconsMode]
-PreviewSize=128
+PreviewSize=176
 TextWidthIndex=0
 
 [KFileDialog Settings]
@@ -42,5 +42,6 @@ Location=Everywhere
 [Toolbar mainToolBar]
 ToolButtonStyle=IconOnly
 
+
 [UiSettings]
-ColorScheme=Orchis-solidDark
+ColorScheme=OrchisDark
