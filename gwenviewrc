@@ -1,6 +1,7 @@
 MenuBar=Disabled
 
 [Crop]
+CropAdvancedSettingsEnabled=true
 CropRatioHeight=1
 CropRatioIndex=1
 CropRatioWidth=1
@@ -28,31 +29,31 @@ MenuBar=Disabled
 ToolButtonStyle=IconOnly
 
 [Recent Files]
-File1[$e]=$HOME/Wallpapers/WallBank/wallpapers/odysee.jpg
-File10[$e]=$HOME/AppImage/Affine/logo.png
-File2[$e]=$HOME/Wallpapers/WallBank/wallpapers/pastel-window.png
-File3[$e]=$HOME/Wallpapers/WallBank/wallpapers/pink-clouds.png
-File4[$e]=$HOME/Wallpapers/WallBank/wallpapers/pixelart_landscape.jpg
-File5[$e]=$HOME/Wallpapers/WallBank/wallpapers/plane_sunset.png
-File6[$e]=$HOME/Wallpapers/WallBank/wallpapers/rocket_launch.jpg
-File7[$e]=$HOME/Wallpapers/WallBank/wallpapers/rocky_land.jpg
-File8[$e]=$HOME/Wallpapers/hyprland/digital-art-isolated-house.jpg
-File9[$e]=$HOME/Wallpapers/hyprland.backup/cr-ai-tive-ai-generated-8331710_1920.png
-Name1[$e]=odysee.jpg
-Name10[$e]=logo.png
-Name2[$e]=pastel-window.png
-Name3[$e]=pink-clouds.png
-Name4[$e]=pixelart_landscape.jpg
-Name5[$e]=plane_sunset.png
-Name6[$e]=rocket_launch.jpg
-Name7[$e]=rocky_land.jpg
-Name8[$e]=digital-art-isolated-house.jpg
-Name9[$e]=cr-ai-tive-ai-generated-8331710_1920.png
+File1[$e]=$HOME/AppImage/Affine/logo.png
+File10[$e]=$HOME/Obsidian Vaults/Personal/_cover/need_to_work.jpg
+File2[$e]=$HOME/Screenshot/2026-03-06-221747_hyprshot.png
+File3[$e]=$HOME/Wallpapers/Sddm/motivation.jpg
+File4[$e]=$HOME/Wallpapers/Sddm/jpg
+File5[$e]=$HOME/Wallpapers/wallpapers/themes/psion-buuf/buuf_wall_by_reckie.jpg
+File6[$e]=$HOME/Wallpapers/wallpapers/xerolinux/Xero-Plasma1.png
+File7[$e]=$HOME/Wallpapers/wallpapers/xerolinux/Xero-Plasma2.png
+File8[$e]=$HOME/Downloads/berserk-guts-brand-of-sacrifice-dark-wallpaper.jpg
+File9[$e]=$HOME/Documents/mySelf/20260101_162244.jpg
+Name1[$e]=logo.png
+Name10[$e]=need_to_work.jpg
+Name2[$e]=2026-03-06-221747_hyprshot.png
+Name3[$e]=motivation.jpg
+Name4[$e]=jpg
+Name5[$e]=buuf_wall_by_reckie.jpg
+Name6[$e]=Xero-Plasma1.png
+Name7[$e]=Xero-Plasma2.png
+Name8[$e]=berserk-guts-brand-of-sacrifice-dark-wallpaper.jpg
+Name9[$e]=20260101_162244.jpg
 
 [SideBar]
 InformationSplitterSizes=220,255
 IsVisible ViewMode=true
-SideBarSplitterSizes=243,726
+SideBarSplitterSizes=243,705
 
 [UiSettings]
 ColorScheme=OrchisDark

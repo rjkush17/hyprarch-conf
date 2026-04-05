@@ -103,6 +103,8 @@ alias tk='tmux kill-session -t' # kill a session
 alias tn='tmux new-session "nvim ."'
 # for compile and run single typecript file
 alias tsrun='npx ts-node --compiler-options "{\"module\":\"CommonJS\"}"'
+# push obsidian in one Commandsaliaalias
+alias obsidian-push='git add . && git commit -m "notes: $(date +"%Y-%m-%d %H:%M")" && git push'
 
 # ----------------------------------------------------------
 # Ruby and rbenv shell Environment

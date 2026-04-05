@@ -5,22 +5,22 @@ local M = {}
 
 M.palette = {
   -- Base16
-  base00 = "#121318",
-  base01 = "#0d0e13",
-  base02 = "#1a1b21",
-  base03 = "#45464f",
-  base04 = "#c5c6d0",
-  base05 = "#e3e2e9",
-  base06 = "#2f3036",
-  base07 = "#38393f",
+  base00 = "#111418",
+  base01 = "#0c0e13",
+  base02 = "#191c20",
+  base03 = "#43474e",
+  base04 = "#c3c6cf",
+  base05 = "#e1e2e8",
+  base06 = "#2e3035",
+  base07 = "#37393e",
 
   base08 = "#ffb4ab",
-  base09 = "#e1bbdc",
-  base0A = "#c0c6dd",
-  base0B = "#b2c5ff",
-  base0C = "#5a3d59",
-  base0D = "#314578",
-  base0E = "#414659",
+  base09 = "#d8bde3",
+  base0A = "#bbc7db",
+  base0B = "#a3c9fe",
+  base0C = "#533f5e",
+  base0D = "#1e4875",
+  base0E = "#3c4758",
   base0F = "#93000a",
 }
 

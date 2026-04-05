@@ -53,8 +53,8 @@ sleep 2.2
 # ----------------------------------------------------------
 # 5. Regenerate colors (pywal + matugen)
 # ----------------------------------------------------------
-wal -i "$WALLPAPER" -q
-matugen image "$WALLPAPER"
+# wal -i "$WALLPAPER" -q
+matugen image "$WALLPAPER" --source-color-index 0 --mode dark
 
 # ----------------------------------------------------------
 # 6. Update notification daemon colors

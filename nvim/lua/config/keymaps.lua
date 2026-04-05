@@ -88,6 +88,23 @@ map(
     })
 )
 
+-- Quickfix navigation (jobs/errors/diagnostics lists)
+map("n", "]q", "<cmd>cnext<CR>zz", opts)  -- next item
+map("n", "[q", "<cmd>cprev<CR>zz", opts)  -- previous item
+
+-- Location list navigation
+map("n", "]l", "<cmd>lnext<CR>zz", opts)
+map("n", "[l", "<cmd>lprev<CR>zz", opts)
+
+-- Preview current quickfix entry
+map("n", "<leader>qp", "<cmd>pedit +set\\ buftype=nofile<CR>", opts)
+
+-- Open quickfix window
+map("n", "<leader>qo", "<cmd>copen<CR>", opts)
+
+-- Close quickfix
+map("n", "<leader>qc", "<cmd>cclose<CR>", opts)
+
 --------------------------------------------------------------------------------
 -- 🧩 Plugin: telescope.nvim
 --------------------------------------------------------------------------------

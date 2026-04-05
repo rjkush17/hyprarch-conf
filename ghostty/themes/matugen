@@ -6,29 +6,29 @@
 # ANSI Palette
 # =====================
 
-palette = 0=#8f909a
+palette = 0=#8d9199
 palette = 1=#ffb4ab
-palette = 2=#b2c5ff
-palette = 3=#c0c6dd
-palette = 4=#e1bbdc
-palette = 5=#314578
-palette = 6=#414659
-palette = 7=#c5c6d0
+palette = 2=#a3c9fe
+palette = 3=#bbc7db
+palette = 4=#d8bde3
+palette = 5=#1e4875
+palette = 6=#3c4758
+palette = 7=#c3c6cf
 
-palette = 8=#45464f
+palette = 8=#43474e
 palette = 9=#93000a
-palette = 10=#dae2ff
-palette = 11=#414659
-palette = 12=#5a3d59
-palette = 13=#b2c5ff
-palette = 14=#dde2f9
-palette = 15=#e3e2e9
+palette = 10=#d3e4ff
+palette = 11=#3c4758
+palette = 12=#533f5e
+palette = 13=#a3c9fe
+palette = 14=#d7e3f8
+palette = 15=#e1e2e8
 
-background = #121318
-foreground = #e3e2e9
+background = #111418
+foreground = #e1e2e8
 
-cursor-color = #b2c5ff
-cursor-text = #e3e2e9
+cursor-color = #a3c9fe
+cursor-text = #e1e2e8
 
-selection-background = #45464f
-selection-foreground = #e3e2e9
+selection-background = #43474e
+selection-foreground = #e1e2e8

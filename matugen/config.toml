@@ -1,5 +1,4 @@
 [config]
-# ...
 
 [templates.kitty]
 input_path = '~/.config/matugen/templates/kitty.conf'
@@ -23,7 +22,6 @@ output_path = '~/.config/rofi/colors.rasi'
 [templates.nvim]
 input_path = "~/.config/matugen/templates/color.lua"
 output_path = "~/.config/nvim/lua/colors/matugen.lua"
-post_hook = "pkill -SIGUSR1 nvim"
 
 [templates.gtk3]
 input_path = '~/.config/matugen/templates/gtk-colors.css'
@@ -60,5 +58,7 @@ output_path = '~/.config/matugen/papirus-folders/folder-color.txt'
 [templates.qt6]
 input_path = '~/.config/matugen/templates/matugen.colors'
 output_path = '~/.local/share/color-schemes/matugen.colors'
+[templates.Obsidian]
+input_path = '~/.config/matugen/templates/obsidian.css'
+output_path = '~/Obsidian Vaults/Notes/.obsidian/themes/Matugen/theme.css'
 
-# allow_remote_control yes
