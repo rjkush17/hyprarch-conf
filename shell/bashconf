@@ -1,0 +1,15 @@
+# ==============================
+# Bash config
+# ==============================
+
+[[ $- != *i* ]] && return
+
+# Bash-only
+alias grep='grep --color=auto'
+PS1='[\u@\h \W]\$ '
+
+# Prompt
+eval "$(starship init bash)"
+
+# ble.sh (syntax highlight + autosuggest)
+source /usr/share/blesh/ble.sh

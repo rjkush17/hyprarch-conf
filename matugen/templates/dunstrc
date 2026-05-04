@@ -1,0 +1,70 @@
+global]
+[global]
+monitor = 0
+follow = none
+width = (200, 400)
+gaps = true
+gap_size = 2
+height = 100
+origin = right-top
+offset = 0x20
+scale = 0
+notification_limit = 8
+padding = 10
+horizontal_padding = 10
+frame_width = 0
+corner_radius = 10
+font = JetBrains Mono 10
+format = "<b>%s</b>\n%b"
+alignment = center
+vertical_alignment = center
+word_wrap = true
+ellipsize = middle
+icon_position = left
+min_icon_size = 32
+max_icon_size = 38
+transparency = 5
+separator_height = 0
+offset = 20x20
+frame_width = 6
+frame_color = "#00000000"
+separator_color = none
+markup = full
+allow_markup = yes
+show_age_threshold = 60
+stack_duplicates = true
+hide_duplicate_count = false
+show_indicators = yes
+history_length = 20
+dmenu = dmenu -p dunst:
+browser = xdg-open
+always_run_script = true
+title = Dunst
+class = Dunst
+startup_notification = false
+verbosity = mesg
+corner_radius = 5
+
+# -------------------------------
+# Low urgency
+# -------------------------------
+[urgency_low]
+timeout = 3
+background = "{{colors.surface.default.hex}}"
+foreground = "{{colors.on_surface.default.hex}}"
+highlight  = "{{colors.primary_container.default.hex}}"
+
+# -------------------------------
+# Normal urgency
+# -------------------------------
+[urgency_normal]
+timeout = 6
+background = "{{colors.surface.default.hex}}"
+foreground = "{{colors.on_surface.default.hex}}"
+highlight  = "{{colors.primary_container.default.hex}}"
+
+[urgency_critical]
+    background = "#ff0000"
+    foreground = "#ffffff"
+    frame_color = "#ff0000"
+    timeout = 10

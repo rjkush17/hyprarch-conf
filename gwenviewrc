@@ -1,0 +1,55 @@
+[Crop]
+CropAdvancedSettingsEnabled=true
+CropRatioHeight=1
+CropRatioIndex=1
+CropRatioWidth=1
+
+[FullScreen]
+FullScreenBarHeight=100
+
+[General]
+BackgroundColorMode=DocumentView::Dark
+FullScreenBackground=FullScreenBackground::Image
+LastUsedVersion=210800
+ShowHiddenFiles=true
+SideBarPage=operations
+
+[ImageView]
+ThumbnailSplitterSizes=721,205
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=32
+
+[MainWindow][Toolbar mainToolBar]
+ToolButtonStyle=IconOnly
+
+[Recent Files]
+File1[$e]=$HOME/Pictures/Screenshots/screenshot-2026-05-02_07-37-32.png
+File10[$e]=$HOME/Pictures/Screenshots/screenshot-2026-05-04_00-28-15.png
+File2[$e]=$HOME/Pictures/Screenshots/screenshot-2026-05-02_07-37-44.png
+File3[$e]=$HOME/Pictures/Screenshots/screenshot-2026-05-03_16-03-51.png
+File4[$e]=$HOME/Pictures/Screenshots/screenshot-2026-05-03_16-04-39.png
+File5[$e]=$HOME/Pictures/Screenshots/screenshot-2026-05-03_16-08-38.png
+File6[$e]=$HOME/Pictures/Screenshots/screenshot-2026-05-03_16-23-40.png
+File7[$e]=$HOME/Pictures/Screenshots/screenshot-2026-05-03_16-32-11.png
+File8[$e]=$HOME/Pictures/Screenshots/screenshot-2026-05-03_19-26-40.png
+File9[$e]=$HOME/Pictures/Screenshots/screenshot-2026-05-03_19-31-40.png
+Name1[$e]=screenshot-2026-05-02_07-37-32.png
+Name10[$e]=screenshot-2026-05-04_00-28-15.png
+Name2[$e]=screenshot-2026-05-02_07-37-44.png
+Name3[$e]=screenshot-2026-05-03_16-03-51.png
+Name4[$e]=screenshot-2026-05-03_16-04-39.png
+Name5[$e]=screenshot-2026-05-03_16-08-38.png
+Name6[$e]=screenshot-2026-05-03_16-23-40.png
+Name7[$e]=screenshot-2026-05-03_16-32-11.png
+Name8[$e]=screenshot-2026-05-03_19-26-40.png
+Name9[$e]=screenshot-2026-05-03_19-31-40.png
+
+[SideBar]
+InformationSplitterSizes=220,255
+IsVisible ViewMode=true
+SideBarSplitterSizes=245,677
+
+[Toolbar mainToolBar]
+ToolButtonStyle=IconOnly

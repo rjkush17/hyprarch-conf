@@ -1,0 +1,49 @@
+MenuBar=Disabled
+
+[Baloo KEditCommentDialog]
+1920x1080 screen: Window-Maximized=true
+
+[CompactMode]
+IconSize=22
+MaximumTextWidthIndex=2
+UseSystemFont=false
+ViewFont=Adwaita Mono,14,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+
+[DetailsMode]
+PreviewSize=32
+
+[General]
+OpenExternallyCalledFolderInNewTab=true
+ShowFullPathInTitlebar=true
+SingleClick=false
+TerminalApplication=kitty
+Version=202
+ViewPropsTimestamp=2025,9,16,9,20,30.963
+
+[IconsMode]
+PreviewSize=96
+
+[InformationPanel]
+dateFormat=ShortFormat
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=32
+
+[MainWindow]
+MenuBar=Disabled
+
+[MainWindow][Toolbar mainToolBar]
+ToolButtonStyle=IconOnly
+
+[PlacesPanel]
+IconSize=32
+
+[PreviewSettings]
+Plugins=appimagethumbnail,audiothumbnail,glycin-heif,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,glycin-image-rs,jpegthumbnail,glycin-jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,mltpreview,opendocumentthumbnail,glycin-svg,svgthumbnail
+
+[Search]
+Location=Everywhere
+
+[Toolbar mainToolBar]
+ToolButtonStyle=IconOnly
